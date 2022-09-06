@@ -1,9 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Combo&display=swap");
 
-.title{
+.title {
   border-left: 5px solid rgba(12, 236, 211, 1);
   border-right: 5px solid rgba(0, 120, 208, 1);
   padding: 0 5rem;
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
+    padding: 0 3rem;
+  }
+  @media (max-width: 1024px) {
+    max-width: 100%;
+    border-left: 3px solid rgba(12, 236, 211, 1);
+    border-right: 3px solid rgba(0, 120, 208, 1);
+    padding: 0 2rem;
+  }
 
   h1 {
     background: rgb(12, 6, 6);
@@ -13,5 +24,12 @@
     font-size: 6em;
     margin: 0;
     transform: rotate(-3.6deg);
+
+    @media (max-width: 1024px) {
+      font-size: 4em;
+    }
+    @media (max-width: 640px) {
+      font-size: 3.5em;
+    }
   }
 }
