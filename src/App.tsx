@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import "./App.scss";
 import Nav from "./Layout/Nav/Nav";
+import background from "./img/intro.png";
 import About from "./components/About/About";
 import Loading from "./Layout/Loading/Loading";
 import Tools from "./components/Tools/Tools";
@@ -14,7 +15,7 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  if (isLoading ) {
+  if (isLoading) {
     return <Loading />;
   }
 
@@ -22,11 +23,11 @@ function App() {
     <Fragment>
       <Nav />
       <div className="intro">
-        <div className="background">  
+        <div className="background">
         </div>
       </div>
       <About />
-      <Tools />
+      <Tools/>
     </Fragment>
   );
 }
