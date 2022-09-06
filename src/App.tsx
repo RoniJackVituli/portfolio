@@ -1,25 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, useEffect, useState } from "react";
+import "./App.scss";
+import Nav from "./Layout/Nav/Nav";
+import background from "./img/intro.png";
+import About from "./components/About/About";
+import Loading from "./Layout/Loading/Loading";
+import Tools from "./components/Tools/Tools";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Nav />
+      <div className="intro">
+        <div className="background">
+          <img className="img" src={background} alt="background" />
+        </div>
+      </div>
+      <About />
+      <Tools />
+    </Fragment>
   );
 }
 
