@@ -17,13 +17,20 @@
   }
 
   h1 {
-    background: rgb(12, 6, 6);
+    background: -webkit-linear-gradient(270deg, rgba(12,236,211,1) 0%, rgba(0,120,208,1) 72%);
+    color:white;
     padding: 10px;
     border-radius: 10px;
     font-family: "Combo", cursive !important;
     font-size: 6em;
     margin: 0;
     transform: rotate(-3.6deg);
+    text-shadow:
+    3px  3px 0 rgb(255, 255, 255),
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px  1px 0 #000,
+    1px  1px 0 #000;
 
     @media (max-width: 1024px) {
       font-size: 4em;
@@ -32,4 +39,6 @@
       font-size: 3.5em;
     }
   }
+
+
 }
