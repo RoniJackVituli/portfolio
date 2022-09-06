@@ -1,7 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import "./App.scss";
 import Nav from "./Layout/Nav/Nav";
-import background from "./img/intro.png";
 import About from "./components/About/About";
 import Loading from "./Layout/Loading/Loading";
 import Tools from "./components/Tools/Tools";
@@ -24,6 +23,7 @@ function App() {
       <Nav />
       <div className="intro">
         <div className="background">
+
         </div>
       </div>
       <About />
