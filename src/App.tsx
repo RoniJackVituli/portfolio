@@ -4,6 +4,7 @@ import Nav from "./Layout/Nav/Nav";
 import About from "./components/About/About";
 import Loading from "./Layout/Loading/Loading";
 import Tools from "./components/Tools/Tools";
+import Works from "./components/Works/Works";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,11 +24,11 @@ function App() {
       <Nav />
       <div className="intro">
         <div className="background">
-
         </div>
       </div>
       <About />
       <Tools/>
+      <Works/>
     </Fragment>
   );
 }

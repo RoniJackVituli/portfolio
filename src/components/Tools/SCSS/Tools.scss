@@ -1,12 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Combo&display=swap");
 
-.section__tool {
+.container__tools {
   background-color: rgb(31, 31, 31);
+  padding-top: 5rem;
+  border-bottom: 1px solid white;
+}
+
+.section__tool {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 5rem;
+
 
   .tools__box {
     margin-top: 4rem;
@@ -55,15 +60,15 @@
         font-size: 18px;
         text-transform: capitalize;
         font-weight: 700;
-        @media (min-width: 1025px) and (max-width: 1300px){
-            font-size: 16px;
+        @media (min-width: 1025px) and (max-width: 1300px) {
+          font-size: 16px;
         }
         @media (min-width: 760px) and (max-width: 1024px) {
-            font-size: 16px;
+          font-size: 16px;
         }
         @media (max-width: 479px) {
-            font-size: 13px;
-        } 
+          font-size: 13px;
+        }
       }
     }
     .cell__icon {

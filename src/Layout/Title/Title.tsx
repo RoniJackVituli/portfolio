@@ -1,13 +1,15 @@
 import React from "react";
-import './Title.scss';
+import "./Title.scss";
 type Props = {
   text: string;
 };
 
-const Title: React.FC<Props> = ({text}) => {
+const Title: React.FC<Props> = ({ text }) => {
   return (
-    <div className="title letter">
-      <h1>{text}</h1>
+    <div className="title">
+      <div className="title__border">
+        <h1>{text}</h1>
+      </div>
     </div>
   );
 };

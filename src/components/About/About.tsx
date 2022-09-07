@@ -16,7 +16,7 @@ const About: React.FC = () => {
 
   return (
     <ScrollContainer>
-      <AnimateOnScroll animation={"flipIn"} delay={0}>
+      <AnimateOnScroll animation={"flipIn"}>
         <div className="about">
           <div className="contant">
             <div className="content-tertiary">
@@ -38,7 +38,7 @@ const About: React.FC = () => {
             <div className="contentme">
               <p>
                 I'm a Software Engineer student 4th year at Sami Shamoon College
-                of Engineering. I am a highly motivated person, and I have an
+                of Engineering. I am a highly motivated individual, and I have an
                 affinity for the software world. Also, I ran a YouTube channel ,
                 where I share the knowledge I gained during my degree studies. I
                 have a desire to enrich and deepen my knowledge in the software
