@@ -1,18 +1,41 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import { AnimateOnScroll } from "animate-on-scroll-framer";
 import { ScrollContainer } from "react-scroll-motion";
 import { AiOutlineEnter } from "react-icons/ai";
-import img from "../../img/intro.png";
+import { SiGithub } from "react-icons/si";
 import "./Works.scss";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import Title from "../../Layout/Title/Title";
+import projects from "./worksData";
+
+type ProjectData = {
+  title: string;
+  description: string;
+  tech: string;
+  url: string;
+  github: string;
+  img: string;
+};
 
 const Works: React.FC = () => {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
+  const [index, setIndex] = useState<number>(1);
+  const length = projects.length;
+  const [project, setProject] = useState<ProjectData>(projects[0]);
+
+
+  const moveForward = () => {
+    setIndex((prevIndex) => {
+      return prevIndex === length - 1 ? 0 : prevIndex + 1;
+    });
+    setProject(projects[index]);
+  };
+
+  const backForward = () => {
+    setIndex((prevIndex) => {
+      return prevIndex === 0 ? projects.length - 1 : prevIndex - 1;
+    });
+
+    setProject(projects[index]);
+  };
 
   return (
     <ScrollContainer>
@@ -24,7 +47,7 @@ const Works: React.FC = () => {
         <div
           className="works__background"
           style={{
-            backgroundImage: `url(${img})`,
+            backgroundImage: `url(${project.img})`,
             backgroundPosition: "top",
             backgroundSize: "cover",
             height: "90vh",
@@ -34,6 +57,7 @@ const Works: React.FC = () => {
         <div className="works__contact">
           {/* Arrow Left */}
           <svg
+            onClick={backForward}
             width="76"
             height="76"
             fill="none"
@@ -50,6 +74,7 @@ const Works: React.FC = () => {
           </svg>
           {/* Arrow Right */}
           <svg
+            onClick={moveForward}
             width="76"
             height="76"
             fill="none"
@@ -64,23 +89,21 @@ const Works: React.FC = () => {
             <path d="m12.563 5.25 6.75 6.75-6.75 6.75"></path>
             <path d="M18.375 12H4.687"></path>
           </svg>
-          <div className="work__card">
+          <div className="work__card box-floating">
             <div className="card__img">
-              <img src={img} alt="lol" />
+              <img src={project.img} alt="lol" />
             </div>
             <div className="card__description">
-              <h4>Title</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-                ipsum maiores libero repudiandae. Quo quae repellendus provident
-                eaque omnis eos dolorem, voluptatum amet corporis explicabo
-                molestias, nam, quibusdam ducimus in.
-              </p>
+              <h4>{project.title}</h4>
+              <p>{project.description}</p>
               <div className="card__btn">
-                <span className="tech">Tech</span>
-                <span className="btn">
-                  VISIT <AiOutlineEnter />
-                </span>
+                <span className="tech">{project.tech}</span>
+                <a className="btn" href={`${project.url}`}>
+                  Visit <AiOutlineEnter />
+                </a>
+                <a className="git" href={`${project.github}`}>
+                  <SiGithub />
+                </a>
               </div>
             </div>
           </div>
