@@ -6,7 +6,7 @@ import {FaLaptopCode} from 'react-icons/fa';
 import {AiOutlineProfile, AiOutlineMenu} from 'react-icons/ai';
 import {FiPaperclip} from 'react-icons/fi';
 import {MdOutlineContactMail} from 'react-icons/md';
-import { Link, animateScroll } from 'react-scroll'
+import { Link } from 'react-scroll'
 
 
 const Header: React.FC = () => {
