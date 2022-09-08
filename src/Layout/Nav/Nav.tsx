@@ -6,6 +6,7 @@ import {FaLaptopCode} from 'react-icons/fa';
 import {AiOutlineProfile, AiOutlineMenu} from 'react-icons/ai';
 import {FiPaperclip} from 'react-icons/fi';
 import {MdOutlineContactMail} from 'react-icons/md';
+import { Link, animateScroll } from 'react-scroll'
 
 
 const Header: React.FC = () => {
@@ -22,11 +23,12 @@ const Header: React.FC = () => {
     </div>
     <div className="navs">
       <ul>
-        <li><BiHomeAlt/></li>
-        <li><AiOutlineProfile/></li>
-        <li><FaLaptopCode/></li>
-        <li><FiPaperclip/></li>
-        <li><MdOutlineContactMail/></li>
+        <li><Link activeClass="active" to="home" spy={true} smooth={true} offset={50} duration={500}><BiHomeAlt/></Link></li>
+        
+        <li><Link activeClass="active" to="tools" spy={true} smooth={true} offset={50} duration={500}><AiOutlineProfile/></Link></li>
+        <li><Link activeClass="active" to="works" spy={true} smooth={true} offset={50} duration={500}><FaLaptopCode/> </Link></li>
+        <li><Link activeClass="active" to="resume" spy={true} smooth={true} offset={50} duration={500}><FiPaperclip/> </Link></li>
+        <li><Link activeClass="active" to="contant" spy={true} smooth={true} offset={50} duration={500}><MdOutlineContactMail/> </Link></li>
       </ul>
     </div>
    </div>

@@ -39,7 +39,7 @@ const Tools: React.FC = () => {
 
   return (
     <ScrollContainer>
-      <div className="container__tools">
+      <div className="container__tools" id="tools">
         <AnimateOnScroll animation={"fadeInRight"}>
           <Title text={"TOOLING"} />
         </AnimateOnScroll>

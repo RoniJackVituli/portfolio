@@ -17,7 +17,7 @@ const About: React.FC = () => {
   return (
     <ScrollContainer>
       <AnimateOnScroll animation={"flipIn"}>
-        <div className="about">
+        <div className="about" id="home">
           <div className="contant">
             <div className="content-tertiary">
               <h1>Hi, I'm</h1>
