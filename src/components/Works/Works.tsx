@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AnimateOnScroll } from "animate-on-scroll-framer";
 import { ScrollContainer } from "react-scroll-motion";
 import { AiOutlineEnter } from "react-icons/ai";
@@ -6,11 +6,17 @@ import { SiGithub } from "react-icons/si";
 import "./Works.scss";
 import Title from "../../Layout/Title/Title";
 import projects from "./worksData";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Works: React.FC = () => {
   const [current, setCurrent] = useState<number>(0);
   const length = projects.length;
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   const moveForward = () => {
     setCurrent((prevCurrent) => {
@@ -78,7 +84,7 @@ const Works: React.FC = () => {
                     <path d="m12.563 5.25 6.75 6.75-6.75 6.75"></path>
                     <path d="M18.375 12H4.687"></path>
                   </svg>
-                  <div className="work__card box-floating">
+                  <div data-aos="slidein" className="work__card box-floating">
                     <div className="card__img">
                       <img src={project.img} alt="lol" />
                     </div>
