@@ -1,6 +1,6 @@
-import estudy from "../../img/estudy.png";
-import gtw from '../../img/gtw.png'
-import ls from '../../img/link-short.png'
+import estudy from "../../img/estudy.jpeg";
+import gtw from '../../img/gtw.jpeg'
+import ls from '../../img/link-short.jpeg'
 export type ProjectData = {
   title: string;
   description: string;
