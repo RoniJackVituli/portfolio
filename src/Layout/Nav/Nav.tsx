@@ -1,37 +1,57 @@
-import React from "react";
+import React, {useState} from "react";
 import "./SCSS/Nav.scss";
-import logo from '../../img/logo.png'
-import {BiHomeAlt} from 'react-icons/bi';
-import {FaLaptopCode} from 'react-icons/fa';
-import {AiOutlineProfile, AiOutlineMenu} from 'react-icons/ai';
-import {FiPaperclip} from 'react-icons/fi';
-import {MdOutlineContactMail} from 'react-icons/md';
-import { Link } from 'react-scroll'
+import logo from "../../img/logo.png";
+import { AiOutlineMenu } from "react-icons/ai";
+import { Link } from "react-scroll";
+import MenuNav from "./MenuNav";
+import items from "./SCSS/items";
+
 
 
 const Header: React.FC = () => {
-  
-  
-  
+
+  const [isOpen , setIsOpen] = useState(false);
+
+  const open = () =>{
+    setIsOpen(true);
+  }
+  const close = () => {
+    setIsOpen(false);
+  }
+
   return (
-   <div className="nav__bar">
-    <div className="logo">
-      <img src={logo} alt="logo"/>
+    <div className="nav__bar">
+      <div className="logo">
+        <img src={logo} alt="logo" />
+      </div>
+      <div className="menu__mobile">
+        {isOpen && <MenuNav openHandler={open} closeHandler={close}/>}
+        {!isOpen && <AiOutlineMenu onClick={open}/>}
+
+      </div>
+      <div className="navs">
+        <ul>
+          {items &&
+            items.map((item) => {
+              return (
+                <li key={item.to}>
+                  <Link
+                    activeClass="active"
+                    to={item.to}
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                  >
+                    {item.icon}
+                  </Link>
+                </li>
+              );
+            })}
+
+        </ul>
+      </div>
     </div>
-    <div className="menu__mobile">
-      <AiOutlineMenu/>
-    </div>
-    <div className="navs">
-      <ul>
-        <li><Link activeClass="active" to="home" spy={true} smooth={true} offset={50} duration={500}><BiHomeAlt/></Link></li>
-        
-        <li><Link activeClass="active" to="tools" spy={true} smooth={true} offset={50} duration={500}><AiOutlineProfile/></Link></li>
-        <li><Link activeClass="active" to="works" spy={true} smooth={true} offset={50} duration={500}><FaLaptopCode/> </Link></li>
-        <li><Link activeClass="active" to="resume" spy={true} smooth={true} offset={50} duration={500}><FiPaperclip/> </Link></li>
-        <li><Link activeClass="active" to="contant" spy={true} smooth={true} offset={50} duration={500}><MdOutlineContactMail/> </Link></li>
-      </ul>
-    </div>
-   </div>
   );
 };
 

@@ -1,3 +1,4 @@
+
 .nav__bar {
   position: fixed;
   width: 100%;
@@ -33,7 +34,7 @@
 
   .menu__mobile {
     display: none;
-    @media (max-width: 800px) {
+    @media (max-width: 640px) {
       display: inline;
       position: fixed;
       right: 10px;
