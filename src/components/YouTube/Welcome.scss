@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap");
 .welcome {
   display: block;
-  height: 30vh;
+  height: 40vh;
   width: 100%;
   position: relative;
-
+  @media (max-height:414px) {
+    margin-bottom: 8rem;
+  }
   .line {
     position: absolute;
     margin-left: auto;
@@ -13,7 +15,7 @@
     right: 0;
     top: 4rem;
     width: 0;
-    height: inherit;
+    height: 100%;
     border: 3px solid rgb(0, 166, 255);
     .welcome__sideLeft {
       position: absolute;
@@ -21,8 +23,7 @@
       right: -10rem;
       width: 400px;
       top: 2rem;
-      height: inherit;
-
+      height: max-content;
       @media (max-width: 1024px) {
         right: -13rem;
       }
@@ -69,8 +70,7 @@
       left: 2rem;
       width: 400px;
       top: 2rem;
-      height: inherit;
-
+      height: max-content;
       .description {
         font-size: 1.3rem;
         @media (max-width: 1024px) {

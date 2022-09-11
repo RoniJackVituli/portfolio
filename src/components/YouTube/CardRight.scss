@@ -3,7 +3,9 @@
   height: 30vh;
   width: 100%;
   position: relative;
-
+  @media (max-height: 414px) {
+    margin-bottom: 10rem;
+  }
   .line {
     position: absolute;
     margin-left: auto;
@@ -19,6 +21,9 @@
       left: -27rem;
       width: 400px;
       direction: rtl;
+      @media (max-height: 414px) {
+        margin-top: 2rem;
+      }
       div {
         font-size: 1.3rem;
         @media (max-width: 1024px) {
@@ -45,6 +50,9 @@
       right: -33rem;
       width: 500px;
       direction: ltr;
+      @media (max-height: 414px) {
+        margin-top: 2rem;
+      }
       @media (max-width: 1024px) {
         width: 400px;
         right: -28rem;
@@ -62,6 +70,11 @@
         border-radius: 30px;
         width: 450px;
         height: 350px;
+        
+        @media (max-height: 414px) {
+          width: 150px;
+          height: 200px !important; 
+        }
 
         @media (max-width: 1024px) {
           width: 350px;
