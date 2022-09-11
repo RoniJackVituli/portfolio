@@ -9,6 +9,8 @@ type Props = {
 };
 
 const CardLeft: React.FC<Props> = (props) => {
+  const url = `https://www.youtube.com/embed?listType=playlist&list=${props.video.url}`
+
   return (
     <div className="cardleft">
       <div className="line">
@@ -16,7 +18,7 @@ const CardLeft: React.FC<Props> = (props) => {
           <AnimateOnScroll animation={"fadeInRight"}>
             <Iframe
               className="iframe"
-              url="http://www.youtube.com/embed/bRmxwIEcYGA"
+              url={url}
             />
           </AnimateOnScroll>
         </div>

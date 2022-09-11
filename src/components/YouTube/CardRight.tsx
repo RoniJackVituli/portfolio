@@ -9,19 +9,22 @@ type Props = {
 };
 
 const CardRight: React.FC<Props> = (props) => {
+
+  const url = `https://www.youtube.com/embed?listType=playlist&list=${props.video.url}`
+
   return (
     <div className="cardright">
       <div className="line">
         <div className="cardright__sideLeft">
           <AnimateOnScroll animation={"fadeInRight"}>
-            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore reprehenderit quibusdam consequatur numquam, modi beatae ratione explicabo odio quisquam neque voluptates quas, tenetur quaerat esse nulla dicta. Voluptatibus, numquam ipsam?</div>
+            <div>{props.video.description}</div>
           </AnimateOnScroll>
         </div>
 
         <div className="cardright__sideRight">
           <AnimateOnScroll animation={"fadeInLeft"}>
             <Iframe
-              url="http://www.youtube.com/embed/bRmxwIEcYGA"
+              url={url}
               className="iframe"
             />
           </AnimateOnScroll>
