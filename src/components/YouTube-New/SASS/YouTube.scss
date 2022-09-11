@@ -4,13 +4,14 @@
   overflow: hidden;
   padding-top: 5rem;
   background-color: rgb(31, 31, 31);
+  .youtube__title{
+    margin-bottom: 30px;
+  }
   .story__container{
     position: relative;
     display: flex;
+    align-items: center;
     flex-direction: column;
     padding-bottom: 2rem;
   }
-
-
-
 }

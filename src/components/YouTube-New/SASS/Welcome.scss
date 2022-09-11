@@ -1,0 +1,124 @@
+.welcome__container {
+  // border: 5px solid red;
+  width: 100%;
+  height: 30vh;
+  position: relative;
+  @media (max-height: 375px) {
+    height: 80vh;
+  }
+  @media (max-height: 912px) {
+    height: 50vh;
+  }
+
+  .card__line {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    width: 0;
+    height: inherit;
+    border: 3px solid rgb(0, 166, 255);
+  }
+  .right__line {
+    position: absolute;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-right: 3rem;
+    height: 100%;
+    overflow: hidden;
+
+    .circular--landscape {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 50%;
+      float: right;
+
+      @media (max-width: 1024px) {
+        width: 150px;
+        height: 150px;
+      }
+      a:hover {
+        cursor: url("../../../img/cursorpointer.png"), auto;
+      }
+      img {
+        width: auto;
+        height: 100%;
+        margin-left: -70px;
+        @media (max-width: 1024px) {
+          margin-left: -50px;
+        }
+      }
+    }
+    
+ 
+  }
+
+  .left__line {
+    width: 50%;
+    float: right;
+    direction: ltr;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    align-items: center;
+    height: inherit;
+    overflow: hidden;
+
+    @media (max-width: 1600px) {
+      font-size: 1.1rem;
+    }
+    @media (max-width: 1300px) {
+      font-size: 0.8rem;
+    }
+    @media (max-width: 640px) {
+      font-size: 0.5rem;
+    }
+
+    p {
+      width: 50%;
+      margin: 0px;
+      font-size: 1.3rem;
+
+      @media (max-width: 1400px) {
+        font-size: 1.2rem;
+      }
+      @media (max-width: 1300px) {
+        font-size: 1.1rem;
+      }
+      @media (max-width: 1024px) {
+        font-size: 1rem;
+      }
+      @media (max-width: 870px) {
+        width: 80%;
+        font-size: 0.9rem;
+      }
+      @media (max-width: 640px) {
+        font-size: 0.9rem;
+      }
+      @media (max-width: 450px) {
+        width: 100%;
+        font-size: 0.7rem;
+      }
+      @media (max-width: 280px) {
+        width: 100%;
+        font-size: 0.5rem;
+      }
+
+      @media (max-height: 414px) {
+        font-size: 0.7rem;
+      }
+
+      @media (max-height: 375px) {
+        font-size: 0.7rem;
+      }
+
+      @media (max-height: 280px) {
+        font-size: 0.5rem;
+      }
+    }
+  }
+}
