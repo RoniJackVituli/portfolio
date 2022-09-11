@@ -6,7 +6,7 @@ import Loading from "./Layout/Loading/Loading";
 import Tools from "./components/Tools/Tools";
 import Works from "./components/Works/Works";
 import YouTube from "./components/YouTube-New/YouTube";
-// import YouTube from "./components/YouTube/YouTube";
+import Resume from "./components/Resume/Resume";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,10 +29,10 @@ function App() {
         </div>
       </div>
       <About />
-      <Tools/>
       <Works/>
-      {/* <YouTube/> */}
       <YouTube/>
+      <Tools/>
+      {/* <Resume/> */}
     </Fragment>
   );
 }

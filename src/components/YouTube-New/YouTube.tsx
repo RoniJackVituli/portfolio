@@ -12,7 +12,7 @@ const YouTube: React.FC = () => {
   return (
     <ScrollContainer>
       <div className="youtube__container">
-        <div className="youtube__title">
+        <div className="youtube__title" id="youtube">
           <Title text="YouTube" />
         </div>
 
