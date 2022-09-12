@@ -6,27 +6,33 @@ import { MdOutlineContactMail } from "react-icons/md";
 
 const items = [
   {
+    title:'Home',
     icon: <BiHomeAlt />,
     to: "home",
   },
   {
+    title:'Tools',
     icon: <AiOutlineProfile />,
     to: "tools",
   },
   {
+    title:'Works',
     icon: <FaLaptopCode />,
     to: "works",
   },
 
   {
+    title:'YouTube',
     icon: <AiOutlineYoutube/>,
     to: "youtube"
   },
   {
+    title:'Resume',
     icon: <FiPaperclip />,
     to: "resume",
   },
   {
+    title:'contact',
     icon: <MdOutlineContactMail />,
     to: "contact",
   },

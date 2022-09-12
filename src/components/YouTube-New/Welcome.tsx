@@ -20,10 +20,8 @@ const Welcome: React.FC = () => {
         <AnimateOnScroll animation={"fadeInLeft"}>
           <p>
             If you've made it this far, then I'd like to introduce you to my
-            YouTube channel. My YouTube channel deals with programming languages
-            and the software world, in addition The channel also deals in tech
-            products. You are welcome to take a look at a number of videos
-            below.
+            YouTube channel. My YouTube channel deals with programming languages, Software world, Tech Products and more.
+            You are welcome to take a look at a my videos.
           </p>
         </AnimateOnScroll>
       </div>

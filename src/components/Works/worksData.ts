@@ -14,7 +14,7 @@ const projects: ProjectData[] = [
   {
     title: "estudy",
     description:
-      "Who among us was a student and did not look for summaries or tests for example and anything that could help him at that time. Estudy is a project that comes to help collect all Homeworks, Tests, Projects, Notebooks of students in order to help other students also succeed in the degree.",
+      "Who among us was a student and didn't look for summaries, helping materials, or even an old tests at difficult times when help was in need?. Estudy is a project that comes to help collect all Homework, Tests, Projects, Notebooks of students to help others succeed in the degree.",
     tech: "django",
     url: "http://estudy-sce.herokuapp.com/",
     github: "https://github.com/Project-Management-SCE/estudy-sce-web",
