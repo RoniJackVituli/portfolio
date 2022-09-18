@@ -7,6 +7,7 @@ import Tools from "./components/Tools/Tools";
 import Works from "./components/Works/Works";
 import YouTube from "./components/YouTube-New/YouTube";
 import Footer from "./Layout/Footer/Footer";
+import Contact from "./components/Contact/Contact";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
       <Works/>
       <YouTube/>
       <Tools/>
+      <Contact/>
       {/* <Resume/> */}
       <Footer/>
     </Fragment>

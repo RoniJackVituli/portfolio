@@ -1,0 +1,28 @@
+
+.input-content{
+  width: 100%;
+  input{
+    width: 100%;
+    font-size: 20px;
+    border: none;
+    height: 50px;
+    border-bottom: 1px solid white;
+    background: inherit;
+    color: white;
+    outline: none;
+    transition: 0.5s;
+    font-family: "Lato", sans-serif ;
+
+  }
+  input:focus{
+    border-color:black;
+
+  }
+
+  input::placeholder{
+    color: white;
+    font-family: "Lato", sans-serif ;
+
+    text-transform: capitalize;
+  }
+}

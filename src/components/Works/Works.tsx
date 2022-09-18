@@ -33,7 +33,7 @@ const Works: React.FC = () => {
         </AnimateOnScroll>
         {projects.map((project, index) => {
           return (
-            <div>
+            <div key={index}>
             {index === current && (<>
                 <div
                   className="works__background"
