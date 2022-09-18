@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Oswald:wght@200;400&display=swap');
-.contact-container{
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Oswald:wght@200;400&display=swap");
+
+.contact-container {
   display: flex;
   flex-direction: column;
   max-width: 1000px;
@@ -10,15 +11,14 @@
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-  .contact-cards{
-    @media (max-width: 1250px ) {
+  .contact-cards {
+    @media (max-width: 1250px) {
       flex-direction: column;
       max-width: 500px;
     }
     width: 100%;
     display: flex;
-    .card-right{
-      
+    .card-right {
       position: relative;
       background: -webkit-linear-gradient(
         270deg,
@@ -27,7 +27,7 @@
       );
       width: 100%;
     }
-    .card-left{
+    .card-left {
       color: black;
       background: #fafafa;
       width: 100%;

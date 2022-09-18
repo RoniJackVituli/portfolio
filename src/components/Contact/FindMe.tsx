@@ -1,7 +1,8 @@
 import React from "react";
-import "./FindMe.scss";
 import { SiFacebook, SiLinkedin, SiInstagram, SiYoutube } from "react-icons/si";
 import Social from "./Social";
+import "./FindMe.scss";
+
 type SocialMeida = {
   icon: any;
   name: string;

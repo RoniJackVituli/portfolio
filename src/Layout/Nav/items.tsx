@@ -1,38 +1,38 @@
 import { BiHomeAlt } from "react-icons/bi";
 import { FaLaptopCode } from "react-icons/fa";
-import { AiOutlineProfile, AiOutlineYoutube} from "react-icons/ai";
+import { AiOutlineProfile, AiOutlineYoutube } from "react-icons/ai";
 import { FiPaperclip } from "react-icons/fi";
 import { MdOutlineContactMail } from "react-icons/md";
 
 const items = [
   {
-    title:'Home',
+    title: "Home",
     icon: <BiHomeAlt />,
     to: "home",
   },
   {
-    title:'Tools',
+    title: "Tools",
     icon: <AiOutlineProfile />,
     to: "tools",
   },
   {
-    title:'Works',
+    title: "Works",
     icon: <FaLaptopCode />,
     to: "works",
   },
 
   {
-    title:'YouTube',
-    icon: <AiOutlineYoutube/>,
-    to: "youtube"
+    title: "YouTube",
+    icon: <AiOutlineYoutube />,
+    to: "youtube",
   },
   {
-    title:'Resume',
+    title: "Resume",
     icon: <FiPaperclip />,
     to: "resume",
   },
   {
-    title:'contact',
+    title: "contact",
     icon: <MdOutlineContactMail />,
     to: "contact",
   },
