@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "./SCSS/Nav.scss";
 import logo from "../../img/logo.png";
-import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 import { Drawer } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import Hamburger from "hamburger-react";
+import Tooltip from "@mui/material/Tooltip";
+
 import items from "./items";
 import MobileNav from "./MobileNav";
 
@@ -17,6 +19,8 @@ const Header: React.FC = () => {
     });
   };
 
+
+
   return (
     <div className="nav__bar">
       <div className="logo">
@@ -24,7 +28,7 @@ const Header: React.FC = () => {
       </div>
       <div className="menu__mobile">
         <IconButton color="inherit" sx={{ mr: 0, p: 0 }} disableRipple={true}>
-          <Hamburger size={20} onToggle={menuMobileHandler} toggled={clicked}/>
+          <Hamburger size={20} onToggle={menuMobileHandler} toggled={clicked} />
         </IconButton>
         <Drawer
           anchor="right"
@@ -33,7 +37,7 @@ const Header: React.FC = () => {
           onClose={menuMobileHandler}
           sx={{ zIndex: "0" }}
         >
-          <MobileNav menuHandler = {menuMobileHandler}/>
+          <MobileNav menuHandler={menuMobileHandler} />
         </Drawer>
       </div>
       <div className="navs">
@@ -41,17 +45,17 @@ const Header: React.FC = () => {
           {items &&
             items.map((item) => {
               return (
-                <Link
-                  key={item.to}
-                  activeClass="active"
-                  to={item.to}
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
+                <Tooltip
+                  title={item.title}
+                  placement="bottom"
+                  arrow
+                  sx={{ "&.MuiTooltip-popper": { background: "red" } }}
                 >
-                  {item.icon}
-                </Link>
+                  {/* <Link key={item.title} to={item.to} smooth={true} style={{position:'relative' , display: 'inline-block'}}>{item.icon}</Link> */}
+                  <a key={item.title} href={`#${item.to}`}>
+                    {item.icon}
+                  </a>
+                </Tooltip>
               );
             })}
         </ul>

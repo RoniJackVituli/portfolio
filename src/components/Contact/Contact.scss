@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Oswald:wght@200;400&display=swap");
 
+
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -11,6 +12,9 @@
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
+  .title-contact{
+    margin: 30px 0;
+  }
   .contact-cards {
     @media (max-width: 1250px) {
       flex-direction: column;

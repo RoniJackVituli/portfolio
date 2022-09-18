@@ -11,11 +11,6 @@ const items = [
     to: "home",
   },
   {
-    title: "Tools",
-    icon: <AiOutlineProfile />,
-    to: "tools",
-  },
-  {
     title: "Works",
     icon: <FaLaptopCode />,
     to: "works",
@@ -27,14 +22,19 @@ const items = [
     to: "youtube",
   },
   {
+    title: "Tools",
+    icon: <AiOutlineProfile />,
+    to: "tools",
+  },
+  {
+    title: "Contact",
+    icon: <MdOutlineContactMail />,
+    to: "contact",
+  },
+  {
     title: "Resume",
     icon: <FiPaperclip />,
     to: "resume",
-  },
-  {
-    title: "contact",
-    icon: <MdOutlineContactMail />,
-    to: "contact",
   },
 ];
 
