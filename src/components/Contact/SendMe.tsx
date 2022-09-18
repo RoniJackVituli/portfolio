@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Input from "../../Layout/Input/Input";
-// import { FidgetSpinner } from "react-loader-spinner";
+import { FidgetSpinner } from "react-loader-spinner";
 
 import "./SendMe.scss";
 
@@ -73,7 +73,7 @@ const SendMe: React.FC = () => {
           </div>
         </form>
       )}
-      {/* {isLoading && (
+      {isLoading && (
         <div className="loader">
           <FidgetSpinner
             visible={true}
@@ -84,7 +84,7 @@ const SendMe: React.FC = () => {
           />
           <h3>Sending...</h3>
         </div>
-      )} */}
+      )}
     </div>
   );
 };

@@ -4,7 +4,6 @@ import "./Contact.scss";
 import SendMe from "./SendMe";
 import FindMe from "./FindMe";
 
-
 const Contact: React.FC = () => {
   return (
     <div className="contact-container" id="contact">
