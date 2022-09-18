@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./SCSS/Nav.scss";
 import logo from "../../img/logo.png";
-import { NavLink } from "react-router-dom";
 import { Drawer } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import Hamburger from "hamburger-react";
