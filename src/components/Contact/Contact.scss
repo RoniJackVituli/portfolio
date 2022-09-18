@@ -15,9 +15,11 @@
       flex-direction: column;
       max-width: 500px;
     }
-    display: flex;
     width: 100%;
+    display: flex;
     .card-right{
+      
+      position: relative;
       background: -webkit-linear-gradient(
         270deg,
         rgba(12, 236, 211, 1) 0%,

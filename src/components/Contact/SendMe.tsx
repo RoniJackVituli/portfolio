@@ -76,6 +76,7 @@ const SendMe: React.FC = () => {
       )}
       {isLoading && (
         <div className="loader">
+          
           <FidgetSpinner
             visible={true}
             height="80"
