@@ -9,7 +9,7 @@ const Contact: React.FC = () => {
   return (
     <div className="contact-container" id="contact">
       <div className="title-contact">
-        <Title text="keep in touch"/>
+        <Title text="get in touch "/>
       </div>
       <div className="contact-cards">
         <div className="card-right">
