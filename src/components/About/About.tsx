@@ -8,6 +8,7 @@ import FullName from "../FullName/FullName";
 import Typing from "typewriter-effect";
 
 const About: React.FC = () => {
+  
   const roles: string[] = [
     "Software Engineering.",
     "Full Stack Developer.",

@@ -38,7 +38,7 @@
       display: inline;
       position: fixed;
       right: 10px;
-      top: 10px;
+      top: 0px;
     }
   }
 
@@ -48,16 +48,16 @@
       list-style: none;
       margin: 0;
       padding: 0;
-    }
-    li {
-      margin-right: 50px;
-      display: inline-block;
-      transition: all 0.5s;
-    }
-    li:hover {
-      color: rgb(12, 236, 210, 0.423);
-      transform: scale(1.2);
-      cursor: url("../../../img/cursorpointer.png"), auto;
+      a {
+        margin-right: 50px;
+        display: inline-block;
+        transition: all 0.5s;
+      }
+      a:hover {
+        color: rgb(12, 236, 210, 0.423);
+        transform: scale(1.2);
+        cursor: url("../../../img/cursorpointer.png"), auto;
+      }
     }
 
     @media (max-width: 800px) {

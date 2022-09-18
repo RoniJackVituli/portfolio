@@ -3,6 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 import "./FullName.scss";
 
 const FullName: React.FC = () => {
+  
   const [firstName, setFirstName] = useState(false);
   const [secondName, setSecondName] = useState(false);
   const [lastName, setLastName] = useState(false);

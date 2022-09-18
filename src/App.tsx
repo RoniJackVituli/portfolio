@@ -7,6 +7,14 @@ import Tools from "./components/Tools/Tools";
 import Works from "./components/Works/Works";
 import YouTube from "./components/YouTube-New/YouTube";
 
+const Alert:React.FC = () => {
+  useEffect(()=>{
+    alert('Welcome to my website!, I would like to inform that the site is still under development');
+  },[])
+  return <></>
+}
+
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -22,6 +30,7 @@ function App() {
 
   return (
     <Fragment>
+      {/* <Alert/> */}
       <Nav />
       <div className="intro">
         <div className="background">

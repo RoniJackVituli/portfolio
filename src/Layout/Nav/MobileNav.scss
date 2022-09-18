@@ -1,0 +1,19 @@
+.mobilenav-container {
+  display: flex;
+  flex-direction: column;
+  background: rgb(0, 0, 0) !important;
+  height: 100%;
+  align-items: center;
+  padding-top: 4rem;
+  width: 100px;
+  font-size: 2em;
+  .item {
+    color: white;
+    margin-bottom: 2rem;
+    transition: all 0.5s;
+  }
+  .item:hover {
+    color: rgb(12, 236, 210, 0.423);
+    transform: scale(1.2);
+  }
+}
