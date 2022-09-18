@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Input from "../../Layout/Input/Input";
-import { FidgetSpinner } from "react-loader-spinner";
+// import { FidgetSpinner } from "react-loader-spinner";
 
 import "./SendMe.scss";
 
@@ -11,8 +11,7 @@ const SendMe: React.FC = () => {
 
   const submitHandler = (event: React.FormEvent) => {
     event.preventDefault();
-    
-    
+
     setTimeout(() => {
       setIsLoading(true);
       emailjs
@@ -74,9 +73,8 @@ const SendMe: React.FC = () => {
           </div>
         </form>
       )}
-      {isLoading && (
+      {/* {isLoading && (
         <div className="loader">
-          
           <FidgetSpinner
             visible={true}
             height="80"
@@ -86,7 +84,7 @@ const SendMe: React.FC = () => {
           />
           <h3>Sending...</h3>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
