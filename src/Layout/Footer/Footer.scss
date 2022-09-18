@@ -6,12 +6,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem;
-  height: 7vh;
   .fullnameLogo{
+    padding-bottom: 3px;
     margin-top: 25px;
     img{
       width: 300px;
+      @media (max-width: 850px) {
+        width: 250px;
+      }
     }
   }
   .credits{
@@ -21,6 +23,12 @@
     display: flex;
     text-align: center;
     flex-direction: column;
+    @media (max-width: 850px) {
+     font-size: 14px ;
+    }
+    @media (max-width: 640px) {
+     font-size: 10px ;
+    }
     span{
       margin-bottom: 10px;
     }
