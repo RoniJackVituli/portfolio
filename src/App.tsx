@@ -6,6 +6,7 @@ import Loading from "./Layout/Loading/Loading";
 import Tools from "./components/Tools/Tools";
 import Works from "./components/Works/Works";
 import YouTube from "./components/YouTube-New/YouTube";
+import Footer from "./Layout/Footer/Footer";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
       <YouTube/>
       <Tools/>
       {/* <Resume/> */}
+      <Footer/>
     </Fragment>
   );
 }
