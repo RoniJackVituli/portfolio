@@ -9,7 +9,6 @@ import YouTube from "./components/YouTube-New/YouTube";
 import Footer from "./Layout/Footer/Footer";
 import Contact from "./components/Contact/Contact";
 
-
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -27,16 +26,15 @@ function App() {
     <Fragment>
       <Nav />
       <div className="intro">
-        <div className="background">
-        </div>
+        <div className="background"></div>
       </div>
       <About />
-      <Works/>
-      <YouTube/>
-      <Tools/>
-      <Contact/>
+      <Works />
+      <YouTube />
+      <Tools />
+      <Contact />
       {/* <Resume/> */}
-      <Footer/>
+      <Footer />
     </Fragment>
   );
 }
