@@ -18,8 +18,6 @@ const Header: React.FC = () => {
     });
   };
 
-
-
   return (
     <div className="nav__bar">
       <div className="logo">
@@ -48,7 +46,7 @@ const Header: React.FC = () => {
                   title={item.title}
                   placement="bottom"
                   arrow
-                  sx={{ "&.MuiTooltip-popper": { background: "red" } }}
+                  key={item.title}
                 >
                   {/* <Link key={item.title} to={item.to} smooth={true} style={{position:'relative' , display: 'inline-block'}}>{item.icon}</Link> */}
                   <a key={item.title} href={`#${item.to}`}>
