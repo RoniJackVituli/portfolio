@@ -21,7 +21,7 @@ const Loading: React.FC = () => {
       <div className="react-floater-animated">
         <img alt={"logo"} src={loader} />
       </div>
-      <div className="loader">
+      <div className="start-loader">
         <LinearProgress
           color={"inherit"}
           value={progress}
