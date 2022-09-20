@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Input from "../../Layout/Input/Input";
-import { FidgetSpinner } from "react-loader-spinner";
 import "./SendMe.scss";
+import Loader from "../../Layout/Loader/Loader";
 
 const containsOnlyLetters = (str: string) => {
   return /^[a-z A-Z]*$/.test(str);
@@ -176,15 +176,8 @@ const SendMe: React.FC = () => {
         </form>
       )}
       {isLoading && (
-        <div className="loader">
-          <FidgetSpinner
-            visible={true}
-            height="80"
-            width="80"
-            ballColors={["blue", "blue", "blue"]}
-            backgroundColor="white"
-          />
-          <h3>Sending...</h3>
+        <div className="divloader">
+          <Loader />
         </div>
       )}
     </div>

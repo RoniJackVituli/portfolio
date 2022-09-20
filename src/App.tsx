@@ -8,6 +8,7 @@ import Works from "./components/Works/Works";
 import YouTube from "./components/YouTube-New/YouTube";
 import Footer from "./Layout/Footer/Footer";
 import Contact from "./components/Contact/Contact";
+// import Resume from "./components/Resume/Resume";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
