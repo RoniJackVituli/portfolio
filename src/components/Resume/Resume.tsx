@@ -1,7 +1,5 @@
 import React from "react";
 import "./Resume.scss";
-import Title from "../../Layout/Title/Title";
-
 import { saveAs } from "file-saver";
 
 const Resume: React.FC = () => {
@@ -10,8 +8,7 @@ const Resume: React.FC = () => {
   };
   return (
     <div className="resume__container" id="resume">
-        <button className="buttonResume" onClick={saveFile}> RESUME</button>
-      
+        <button className="buttonResume" onClick={saveFile}>RESUME</button>
     </div>
   );
 };

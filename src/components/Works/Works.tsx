@@ -35,6 +35,7 @@ const Works: React.FC = () => {
           return (
             <div key={index}>
             {index === current && (<>
+                {/* <img src={project.img} alt="photo" style={{objectFit:'contain'  , width:"100%" , objectPosition:'top' , filter:'blur(20px)'}} className="works_background"/> */}
                 <div
                   className="works__background"
                   style={{
