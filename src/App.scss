@@ -5,15 +5,18 @@
 .intro {
   background: #050810;
   border-bottom: 1px solid white;
-  .background {
-    opacity: 1;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('./img/intro.jpeg');
+  img{
+    object-fit: cover;
     height: 100vh;
+    width: 100%;
+
   
+    @media (max-width: 450px) {
+      object-fit: cover;
+      height: 100vh;
+    }
   }
+
 }
 @media (max-width: 390px) {
   .intro {

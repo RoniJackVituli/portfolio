@@ -13,6 +13,10 @@
   }
   .start-loader {
     color: turquoise;
+    .css-futumu-MuiLinearProgress-root{
+      margin-bottom: 50px;
+      height: 15px;
+    }
     width: 80vw !important;
   }
 }
@@ -46,4 +50,14 @@
 .loading p {
   color: black;
   margin: 0;
+}
+
+
+@media (max-width:640px) {
+  h2{
+    font-size: 3.5em !important;
+    .loading-text{
+      font-size: 3.5rem;
+    }
+  }
 }

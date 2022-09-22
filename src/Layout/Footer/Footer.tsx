@@ -9,8 +9,8 @@ const Footer = () => {
       <img src={name} alt='name'/>
     </div>
     <div className="credits">
-      <span>@ Copyright 2022</span>
-      <span>All rights reseved. Powered by <b>Roni Jack Vituli</b></span>
+      <span>&copy; Copyright 2022</span>
+      <p>Built from scratch with <span className="heart">&#128153;</span>Powered by <b>Roni Jack Vituli</b></p>
     </div>
   </div>;
 };

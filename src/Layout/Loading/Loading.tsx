@@ -9,9 +9,9 @@ const Loading: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prevProgress) => {
-        return prevProgress >= 100 ? 0 : prevProgress + 1;
+        return prevProgress >= 100 ? 0 : prevProgress + 10;
       });
-    }, 50);
+    }, 500);
     return () => {
       clearInterval(timer);
     };
@@ -29,7 +29,8 @@ const Loading: React.FC = () => {
         />
       </div>
       <div>
-        <Typography variant="h2" color="">{`${progress}%`}</Typography>
+        <Typography variant="h2" color=""><span className="loading-text">Loading... </span>{`${progress}%`}
+        </Typography>
       </div>
     </div>
   );
