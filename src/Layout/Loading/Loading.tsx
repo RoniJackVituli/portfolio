@@ -29,7 +29,7 @@ const Loading: React.FC = () => {
         />
       </div>
       <div>
-        <Typography variant="h2" color=""><span className="loading-text">Loading... </span>{`${progress}%`}
+        <Typography variant="h2" color="">{`${progress}%`}
         </Typography>
       </div>
     </div>
