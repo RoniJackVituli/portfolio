@@ -1,5 +1,5 @@
 import React, { useState,  } from "react";
-import { AnimateOnScroll } from "animate-on-scroll-framer";
+// import { AnimateOnScroll } from "animate-on-scroll-framer";
 import { ScrollContainer } from "react-scroll-motion";
 import { AiOutlineEnter } from "react-icons/ai";
 import { SiGithub } from "react-icons/si";
@@ -28,9 +28,7 @@ const Works: React.FC = () => {
   return (
     <ScrollContainer>
       <div className="works__container" id="works">
-        <AnimateOnScroll animation={"fadeIn"}>
           <Title text="works" />
-        </AnimateOnScroll>
         {projects.map((project, index) => {
           return (
             <div key={index}>

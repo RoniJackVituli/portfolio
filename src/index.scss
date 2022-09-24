@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Oswald:wght@200;400&family=Poppins:wght@100;200;700;800;900&display=swap');
+
 
 *{
   box-sizing: border-box;
@@ -10,8 +12,9 @@ body {
   cursor: url('./img/newCursor.png'), auto;
   color: white;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  font-family: 'Ubuntu', sans-serif; 
+  font-family: 'Poppins', sans-serif;
+  // font-family: 'Roboto', sans-serif;
+  // font-family: 'Ubuntu', sans-serif; 
   height: 100%;
   width: 100%;
   background: #050810;

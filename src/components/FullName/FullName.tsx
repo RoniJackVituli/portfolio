@@ -13,6 +13,7 @@ const FullName: React.FC = () => {
       style={{
         display: "block",
         fontSize: "5em",
+        fontWeight: "700",
         marginRight: `${lastName ? "50px" : "0"}`,
         width: "100%",
       }}

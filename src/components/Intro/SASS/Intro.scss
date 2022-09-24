@@ -1,0 +1,21 @@
+.intro-container {
+  height: 100vh;
+  img{
+    border-bottom: 1px solid white;
+    height: inherit;
+    object-fit: cover;
+    width: 100%;
+  }
+  animation: fadeIn 0.5s linear;
+}
+
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+
+}

@@ -1,16 +1,17 @@
 import React, { Fragment, useEffect, useState } from "react";
 import "./App.scss";
-import backgroundImage from './img/intro.jpeg'
-import Nav from "./Layout/Nav/Nav";
 import About from "./components/About/About";
 import Loading from "./Layout/Loading/Loading";
 import Tools from "./components/Tools/Tools";
 import Works from "./components/Works/Works";
 import YouTube from "./components/YouTube-New/YouTube";
-import Footer from "./Layout/Footer/Footer";
 import Contact from "./components/Contact/Contact";
-
 import Resume from "./components/Resume/Resume";
+
+import Nav from "./Layout/Nav/Nav";
+
+import Footer from "./Layout/Footer/Footer";
+import Intro from "./components/Intro/Intro";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,9 +29,7 @@ function App() {
   return (
     <Fragment>
       <Nav />
-      <div className="intro">
-        <img src={backgroundImage} alt="Intro"/>
-      </div>
+      <Intro/>
       <About />
       <Works />
       <YouTube />
@@ -40,6 +39,7 @@ function App() {
       <Footer />
     </Fragment>
   );
+
 }
 
 export default App;

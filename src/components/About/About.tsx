@@ -1,7 +1,7 @@
 import React from "react";
 import "./SCSS/About.scss";
 import Avatar from "../Avatar/Avatar";
-import { AnimateOnScroll } from "animate-on-scroll-framer";
+// import { AnimateOnScroll } from "animate-on-scroll-framer";
 import "animate.css/animate.min.css";
 import FullName from "../FullName/FullName";
 import Typing from "typewriter-effect";
@@ -16,7 +16,6 @@ const About: React.FC = () => {
   const descripation: string = "I'm a Software Engineer student 4th year at Sami Shamoon College of Engineering. I am a highly motivated individual, and I have an affinity for the software world. Also, I ran a YouTube channel , where I share the knowledge I gained during my degree studies. I have a desire to enrich and deepen my knowledge in the software world and discover new things."
 
   return (
-    <AnimateOnScroll animation={"flipIn"}>
       <div className="about" id="home">
         <div className="contant">
           <div className="content-tertiary">
@@ -45,7 +44,6 @@ const About: React.FC = () => {
           <Avatar />
         </div>
       </div>
-    </AnimateOnScroll>
   );
 };
 

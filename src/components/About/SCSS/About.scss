@@ -6,7 +6,11 @@
   justify-content: center;
   justify-content: space-between;
   border-bottom: 1px solid white;
+  background-image: url("../../../img/v1016-b-08.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
 }
+
 
 .avatar {
   padding-right: 15rem;
@@ -74,7 +78,8 @@
   }
   .content-tertiary {
     h1 {
-      font-size: 1.2em;
+      margin: 0;
+      font-size: 1.7em;
     }
   }
   .content-primary {
@@ -106,10 +111,12 @@
     margin: 0;
   }
   .contant {
+    margin: 0;
     text-align: center;
   }
   .content-tertiary {
     width: 100%;
+    font-size: 2rem;
   }
   .content-primary {
     font-size: 0.5em;
