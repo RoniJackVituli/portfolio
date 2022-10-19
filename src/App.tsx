@@ -9,7 +9,7 @@ import Contact from "./components/Contact/Contact";
 import Resume from "./components/Resume/Resume";
 
 import Nav from "./Layout/Nav/Nav";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer} from "react-toastify";
 import Footer from "./Layout/Footer/Footer";
 import Intro from "./components/Intro/Intro";
 
