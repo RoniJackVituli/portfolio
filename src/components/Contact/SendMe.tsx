@@ -3,7 +3,8 @@ import emailjs from "@emailjs/browser";
 import Input from "../../Layout/Input/Input";
 import "./SendMe.scss";
 import Loader from "../../Layout/Loader/Loader";
-
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const containsOnlyLetters = (str: string) => {
   return /^[a-z A-Z]*$/.test(str);
 };
@@ -92,14 +93,14 @@ const SendMe: React.FC = () => {
           "ronijackvituli250695",
           "template_9165rjg",
           formRef.current,
-          "yJ_dOX9NZqOov_8iv"
+          "NDkm2tmXaqzhq94w0"
         )
         .then((response) => {
           setIsLoading(false);
-          console.log("SUCCESS!", response.status, response.text);
+          toast.success('The Mail Send')
         })
         .catch((err) => {
-          console.log("FAILD!!....", err);
+          toast.error('something worng, please send mail to rjvtechnology@gmail.com');
         });
     }, 500);
   };

@@ -1,10 +1,11 @@
 .intro-container {
-  height: 100vh;
+  
   img{
     border-bottom: 1px solid white;
     height: inherit;
     object-fit: cover;
     width: 100%;
+    min-height: 100vh;
   }
   animation: fadeIn 0.5s linear;
 }

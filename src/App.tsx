@@ -9,7 +9,7 @@ import Contact from "./components/Contact/Contact";
 import Resume from "./components/Resume/Resume";
 
 import Nav from "./Layout/Nav/Nav";
-
+import { ToastContainer, toast } from "react-toastify";
 import Footer from "./Layout/Footer/Footer";
 import Intro from "./components/Intro/Intro";
 
@@ -28,18 +28,29 @@ function App() {
 
   return (
     <Fragment>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <Nav />
-      <Intro/>
+      <Intro />
       <About />
       <Works />
       <YouTube />
       <Tools />
       <Contact />
-      <Resume/>
+      <Resume />
       <Footer />
     </Fragment>
   );
-
 }
 
 export default App;
