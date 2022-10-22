@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
 import "./App.scss";
 import About from "./components/About/About";
@@ -15,7 +15,6 @@ import Footer from "./Layout/Footer/Footer";
 import Intro from "./components/Intro/Intro";
 
 function App() {
- 
   return (
     <Fragment>
       {ReactDOM.createPortal(
