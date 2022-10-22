@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
+import ReactDOM from "react-dom";
 import "./App.scss";
 import About from "./components/About/About";
 import Loading from "./Layout/Loading/Loading";
@@ -9,25 +10,18 @@ import Contact from "./components/Contact/Contact";
 import Resume from "./components/Resume/Resume";
 
 import Nav from "./Layout/Nav/Nav";
-import { ToastContainer} from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import Footer from "./Layout/Footer/Footer";
 import Intro from "./components/Intro/Intro";
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 5400);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (isLoading) {
-    return <Loading />;
-  }
-
+ 
   return (
     <Fragment>
+      {ReactDOM.createPortal(
+        <Loading />,
+        document.getElementById("loading-root")!
+      )}
       <ToastContainer
         position="bottom-right"
         autoClose={5000}

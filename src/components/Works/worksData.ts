@@ -1,6 +1,7 @@
 import estudy from "../../img/estudy.jpeg";
 import gtw from '../../img/gtw.jpeg'
 import ls from '../../img/link-short.jpeg'
+import weather from '../../img/weather.png';
 export type ProjectData = {
   title: string;
   description: string;
@@ -35,6 +36,14 @@ const projects: ProjectData[] = [
     url: "https://short-url-rjv.herokuapp.com/",
     github: "https://github.com/RoniJack/short-url",
     img: ls,
+  },
+  {
+    title: "weather",
+    description: "In this project, I learn how to build a website that show to you the weather in your location. also you can search city that you want to see the weather",
+    tech: "React",
+    url: "https://weather-rjv.netlify.app/",
+    github: "https://github.com/RoniJack/weather-app/tree/main",
+    img: weather,
   },
 
 
