@@ -1,7 +1,6 @@
 import estudy from "../../img/estudy.jpeg";
 import gtw from "../../img/gtw.jpeg";
 import ls from "../../img/link-short.jpeg";
-import weather from "../../img/weather.png";
 import LetsDeal from "../../img/lets-deal.png";
 export type ProjectData = {
   title: string;
