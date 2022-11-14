@@ -34,7 +34,7 @@ const projects: ProjectData[] = [
     description:
       "Guess The Word is based on the game `'Wordle'` the most popular game today. The technologies I used to develop the game are: React, TypeScript, VScode.",
     tech: "React",
-    url: "https://guess-the-word-rjv.netlify.app/",
+    url: "https://guesstheword-rjv.netlify.app/",
     github: "https://github.com/RoniJack/guess-the-word",
     img: gtw,
   },
