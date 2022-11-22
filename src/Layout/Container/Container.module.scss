@@ -1,0 +1,18 @@
+.mainContainer {
+  max-width: 1850px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 5.5%;
+  @media (max-width: 1700px) {
+    padding: 0px 100px;
+  }
+  @media (max-width: 1440px) {
+    
+  }
+  @media (max-width: 940px) {
+    padding: 0px 60px;
+  }
+  @media (max-width: 850px) {
+    padding: 0 10px;
+  }
+}

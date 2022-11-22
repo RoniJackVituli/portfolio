@@ -1,49 +1,58 @@
-import React, { Fragment } from "react";
-import ReactDOM from "react-dom";
+import React, { Fragment, useEffect, useState } from "react";
 import "./App.scss";
-import About from "./components/About/About";
-import Loading from "./Layout/Loading/Loading";
 import Tools from "./components/Tools/Tools";
-import Works from "./components/Works/Works";
-import YouTube from "./components/YouTube-New/YouTube";
-import Contact from "./components/Contact/Contact";
-import Resume from "./components/Resume/Resume";
+// import Works from "./components/Works/Works";
+// import YouTube from "./components/YouTube-New/YouTube";
+// import Contact from "./components/Contact/Contact";
+// import Resume from "./components/Resume/Resume";
 
 import Nav from "./Layout/Nav/Nav";
-import { ToastContainer } from "react-toastify";
 import Footer from "./Layout/Footer/Footer";
-import Intro from "./components/Intro/Intro";
+import Introdction from "./components/Introduction/Introdction";
+import Loading from "./Layout/Loading/Loading";
+import { useSelector } from "react-redux";
+import { RootState } from "./store";
+const App = () => {
+  const gender = useSelector((state: RootState) => state.gender);
+  const [check, setCheck] = useState(false);
 
-function App() {
+  useEffect(() => {
+    if (gender.clicked) {
+      setTimeout(() => {
+        setCheck(true);
+      }, 500);
+    }
+  }, [gender.clicked]);
+
+  useEffect(() => {
+    if (gender.clicked) {
+      setTimeout(() => {
+        setCheck(false);
+      }, 500);
+      setTimeout(() => {
+        setCheck(true);
+      }, 5000);
+    }
+  }, [gender.clicked]);
+
+  if (!check) {
+    return <Loading />;
+  }
+
   return (
     <Fragment>
-      {ReactDOM.createPortal(
-        <Loading />,
-        document.getElementById("loading-root")!
-      )}
-      <ToastContainer
-        position="bottom-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
       <Nav />
-      <Intro />
-      <About />
-      <Works />
-      <YouTube />
+      <Introdction />
+      {/* <Intro />
+      <About /> */}
+      {/* <Works /> */}
+      {/* <YouTube /> */}
       <Tools />
-      <Contact />
-      <Resume />
+      {/* <Contact /> */}
+      {/* <Resume /> */}
       <Footer />
     </Fragment>
   );
-}
+};
 
 export default App;

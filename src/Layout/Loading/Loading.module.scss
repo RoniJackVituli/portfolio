@@ -1,0 +1,68 @@
+@import '../../variables';
+
+.loading {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  .contant{
+    position: relative;
+  }
+  .select{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: 100px;
+    padding: 0 100px;
+    font-family: $font_female_male;
+    span{
+      width: 100%;
+      transition: 0.2s;
+      border: 1px solid rgba(255, 255, 255, 0.331);
+    }
+    span:hover{
+      color: black;
+      background-color: $slate;
+    }
+    @media (max-width: 1440px) {
+      font-size: 90px;
+      padding: 0 90px;
+    }
+    @media (max-width: 1200px) {
+      font-size: 70px;
+      padding: 0 50px;
+      bottom: 50px;
+    }
+    @media (max-width: 940px) {
+      font-size: 40px;
+      bottom: 100px;
+    }
+    @media (max-width: 640px) {
+      bottom: 180px;
+      padding: 0 20px;
+      font-size: 25px;
+    }
+  }
+}
+
+
+.byebye{
+  animation: fadeOutUp 1s linear forwards;
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, -100%, 0);
+  }
+}

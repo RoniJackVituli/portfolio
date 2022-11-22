@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Input from "../../Layout/Input/Input";
 import "./SendMe.scss";
-import Loader from "../../Layout/Loader/Loader";
+// import Loader from "../../Layout/Loader/Loader";
 import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const containsOnlyLetters = (str: string) => {
@@ -178,7 +178,7 @@ const SendMe: React.FC = () => {
       )}
       {isLoading && (
         <div className="divloader">
-          <Loader />
+          {/* <Loader /> */}
         </div>
       )}
     </div>

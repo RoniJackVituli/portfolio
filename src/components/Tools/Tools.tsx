@@ -14,7 +14,8 @@ import {
   SiDjango,
 } from "react-icons/si";
 import { AiOutlineHtml5 } from "react-icons/ai";
-import { AnimateOnScroll } from "animate-on-scroll-framer";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+import Container from "../../Layout/Container/Container";
 
 type Tool = {
   name: string;
@@ -38,12 +39,10 @@ const Tools: React.FC = () => {
   ];
 
   return (
-    <ScrollContainer>
+    <Container>
       <div className="container__tools" id="tools">
-        <AnimateOnScroll animation={"fadeInRight"}>
           <Title text={"TOOLING"} />
-        </AnimateOnScroll>
-        <AnimateOnScroll animation={"fadeInLeft"}>
+        <AnimationOnScroll animateIn="fadeInUp">
           <section className="section__tool">
             <div className="tools__box">
               {tools.map((tool) => (
@@ -61,9 +60,9 @@ const Tools: React.FC = () => {
               ))}
             </div>
           </section>
-        </AnimateOnScroll>
+        </AnimationOnScroll>
       </div>
-    </ScrollContainer>
+    </Container>
   );
 };
 

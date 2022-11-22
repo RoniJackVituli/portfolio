@@ -1,15 +1,15 @@
 import React from "react";
 import introImage from "../../img/intro.jpeg";
-import "./SASS/Intro.scss";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import Container from "../../Layout/Container/Container";
+import classes from "./Intro.module.scss";
 
 const Intro: React.FC = () => {
   return (
-    <div className="intro-container">
-      {/* <img src={introImage} alt='Intro' loading="lazy" /> */}
-      <LazyLoadImage src={introImage} effect="blur"/>      
-    </div>
+    <Container>
+      <div className={classes.introContainer}>
+        <img src={introImage} alt="Introducation" />
+      </div>
+    </Container>
   );
 };
 

@@ -1,63 +1,61 @@
-import React, { useState } from "react";
-import "./SCSS/Nav.scss";
+import React from "react";
 import logo from "../../img/logo.png";
-import { Drawer } from "@mui/material";
-import IconButton from "@mui/material/IconButton";
-import Hamburger from "hamburger-react";
-import Tooltip from "@mui/material/Tooltip";
+// import { Drawer } from "@mui/material";
+// import IconButton from "@mui/material/IconButton";
+// import Hamburger from "hamburger-react";
+// import Tooltip from "@mui/material/Tooltip";
+import classes from "./Nav.module.scss";
+import {
+  AiFillGithub,
+  AiFillYoutube,
+  AiFillLinkedin,
+  AiFillFacebook,
+} from "react-icons/ai";
+import Container from "../Container/Container";
 
 import items from "./items";
-import MobileNav from "./MobileNav";
 
 const Header: React.FC = () => {
-  const [clicked, setClicked] = useState(false);
-
-  const menuMobileHandler = () => {
-    setClicked((prevClicked) => {
-      return !prevClicked;
-    });
-  };
-
   return (
-    <div className="nav__bar">
-      <div className="logo">
-        <img src={logo} alt="logo" />
+    <Container className={classes.navbarContainer}>
+      <div className={classes.logo}>
+        <div>
+          <img src={logo} alt="logo" />
+        </div>
       </div>
-      <div className="menu__mobile">
-        <IconButton color="inherit" sx={{ mr: 0, p: 0 }} disableRipple={true}>
-          <Hamburger size={20} onToggle={menuMobileHandler} toggled={clicked} />
-        </IconButton>
-        <Drawer
-          anchor="right"
-          open={clicked}
-          variant={"temporary"}
-          onClose={menuMobileHandler}
-          sx={{ zIndex: "0" }}
-        >
-          <MobileNav menuHandler={menuMobileHandler} />
-        </Drawer>
+      <div className={classes.list}>
+      
+          {items.map((item, i) => {
+            return (
+              <a key={item.title + i} href={`#${item.to}`}>
+                <span>{item.icon}</span>
+                {item.title}
+              </a>
+            );
+          })}
       </div>
-      <div className="navs">
+      <div className={classes.sidenavright}>
         <ul>
-          {items &&
-            items.map((item) => {
-              return (
-                <Tooltip
-                  title={item.title}
-                  placement="bottom"
-                  arrow
-                  key={item.title}
-                >
-                  {/* <Link key={item.title} to={item.to} smooth={true} style={{position:'relative' , display: 'inline-block'}}>{item.icon}</Link> */}
-                  <a key={item.title} href={`#${item.to}`}>
-                    {item.icon}
-                  </a>
-                </Tooltip>
-              );
-            })}
+          <li>
+            <AiFillGithub />
+          </li>
+          <li>
+            <AiFillLinkedin />
+          </li>
+          <li>
+            <AiFillFacebook />
+          </li>
+          <li>
+            <AiFillYoutube />
+          </li>
+          <div></div>
         </ul>
       </div>
-    </div>
+      <div className={classes.sidenavleft}>
+        <a href="mailto:rjvtechnology@gmail.com">rjvtechnology@gmail.com</a>
+        <div></div>
+      </div>
+    </Container>
   );
 };
 
