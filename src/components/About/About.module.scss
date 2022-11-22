@@ -52,8 +52,8 @@
         line-height: 75px;
       }
       @media (max-width: 940px) {
-        font-size: 60px;
-        line-height: 60px;
+        font-size: 105px;
+        line-height: 80px;
       }
       @media (max-width: 640px) {
         font-size: 50px;
@@ -81,7 +81,7 @@
       
       span {
         font-size: 55px;
-        color: $slate;
+        color: $lightest-slate;
         @media (max-width: 1440px) {
           font-size: 35px;
           line-height: 50px;
@@ -118,7 +118,7 @@
 
         font-weight: 100;
       }
-      color: $slate;
+      color: $lightest-slate;
       margin: 0;
       font-weight: 100;
       font-size: 24px;

@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import "./App.scss";
 import Tools from "./components/Tools/Tools";
 // import Works from "./components/Works/Works";
-// import YouTube from "./components/YouTube-New/YouTube";
+import YouTube from "./components/YouTube-New/YouTube";
 // import Contact from "./components/Contact/Contact";
 // import Resume from "./components/Resume/Resume";
 
@@ -46,8 +46,8 @@ const App = () => {
       {/* <Intro />
       <About /> */}
       {/* <Works /> */}
-      {/* <YouTube /> */}
       <Tools />
+      <YouTube />
       {/* <Contact /> */}
       {/* <Resume /> */}
       <Footer />

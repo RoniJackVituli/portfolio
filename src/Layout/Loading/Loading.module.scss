@@ -1,13 +1,12 @@
 @import '../../variables';
 
 .loading {
-  height: 80vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 20px;
   .contant{
     position: relative;
   }
@@ -28,7 +27,7 @@
     }
     span:hover{
       color: black;
-      background-color: $slate;
+      background-color: $hover;
     }
     @media (max-width: 1440px) {
       font-size: 90px;

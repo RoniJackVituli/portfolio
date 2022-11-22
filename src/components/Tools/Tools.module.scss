@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Combo&display=swap");
+@import "../../variables";
+.containerTools {
+  .skills {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      text-transform: uppercase;
+      top: 2rem;
+      margin: 0;
+      font-weight: 100;
+      position: absolute;
+      font-size: 80px;
+      letter-spacing: 20px;
+      color: $slate;
+    }
+    h4 {
+      top: 0;
+      letter-spacing: 3px;
+      top: 7rem;
+      position: absolute;
+      margin: 0;
+      color: $slate;
+    }
+    @media (max-width: 1440px) {
+      h1 {
+        font-size: 60px;
+      }
+      h4 {
+        font-size: 13px;
+      }
+    }
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(6, minmax(0, 85px));
+    }
+    @media (max-width: 940px) {
+      grid-template-columns: repeat(5, minmax(0, 80px));
+    }
+    @media (max-width: 640px) {
+      grid-template-columns: repeat(4, minmax(0, 50px));
+    }
+    .table {
+      display: grid;
+      gap: 2.7rem;
+      grid-template-columns: repeat(6, minmax(0, 100px));
+      transition: 0.2s;
+      @media (max-width: 1440px) {
+        grid-template-columns: repeat(6, minmax(0, 90px));
+      }
+      @media (max-width: 1200px) {
+        grid-template-columns: repeat(6, minmax(0, 85px));
+      }
+      @media (max-width: 940px) {
+        grid-template-columns: repeat(5, minmax(0, 80px));
+      }
+      @media (max-width: 640px) {
+        grid-template-columns: repeat(4, minmax(0, 50px));
+      }
+      .circle {
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        img {
+          width: 100%;
+          transition: 0.2s;
+        }
+        img:hover{
+          transform: scale(1.24);
+        }
+      }
+    }
+  }
+}

@@ -25,6 +25,7 @@ const CardTwo: React.FC<Props> = (props) => {
           <Iframe
             url={url}
             className="iframe"
+           
           />
         </AnimateOnScroll>
       </div>
