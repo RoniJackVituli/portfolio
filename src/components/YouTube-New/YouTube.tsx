@@ -27,7 +27,7 @@ const YouTube: React.FC = () => {
               </AnimateOnScroll>
               <AnimateOnScroll animation={"fadeInRight"}>
                 <div className={classes.video}>
-                  {/* <Iframe url={url + video.url} className={classes.iframe} /> */}
+                  <Iframe url={url + video.url} className={classes.iframe} />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -43,7 +43,7 @@ const YouTube: React.FC = () => {
             </AnimateOnScroll>
             <AnimateOnScroll animation={"fadeInLeft"}>
               <div className={classes.video}>
-                {/* <Iframe url={url + video.url} className={classes.iframe} /> */}
+                <Iframe url={url + video.url} className={classes.iframe} />
               </div>
             </AnimateOnScroll>
           </div>
