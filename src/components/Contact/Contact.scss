@@ -12,8 +12,10 @@
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
+  
   .title-contact{
     h1 {
+      text-align: center;
       text-transform: uppercase;
       margin: 0;
       font-weight: 100;
@@ -31,10 +33,11 @@
       }
       @media (max-width: 640px) {
         font-size: 40px;
-        top: 1rem;
       }
     }
+  
     h4 {
+      text-transform: uppercase;
       text-align: center;
       top: 0;
       margin-top: 0;
@@ -56,6 +59,7 @@
       }
     }
   }
+
   .contact-cards {
     @media (max-width: 1250px) {
       flex-direction: column;

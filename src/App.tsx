@@ -1,11 +1,9 @@
 import React, { Fragment, useEffect, useState } from "react";
 import "./App.scss";
 import Tools from "./components/Tools/Tools";
-// import Works from "./components/Works/Works";
 import YouTube from "./components/YouTube-New/YouTube";
 import Contact from "./components/Contact/Contact";
-// import Resume from "./components/Resume/Resume";
-
+import Resume from "./components/Resume/Resume";
 import Nav from "./Layout/Nav/Nav";
 import Footer from "./Layout/Footer/Footer";
 import Loading from "./Layout/Loading/Loading";
@@ -14,11 +12,12 @@ import { RootState } from "./store";
 import { MobileActions } from "./store/mobile-slice";
 import {useDispatch} from 'react-redux';
 import About from "./components/About/About";
+import Works from "./components/Works/Works";
+
 const getWindowSize = () => {
   const { innerWidth, innerHeight } = window;
   return { innerWidth, innerHeight };
 }
-
 
 const App = () => {
   const [ windowSize, setWindowSize] = useState(getWindowSize());
@@ -44,6 +43,7 @@ const App = () => {
         setLoading(true);
       }, 5000);
     }
+    // eslint-disable-next-line
   }, []);
 
 
@@ -57,7 +57,6 @@ const App = () => {
     };
   }, []);
 
-  
 
   useEffect(() => {
     if (windowSize.innerWidth < 940) {
@@ -77,13 +76,11 @@ const App = () => {
     <Fragment>
       <Nav />
       <About/>
-      {/* <Intro />
-      <About /> */}
-      {/* <Works /> */}
       <Tools />
+      <Works/>
       <YouTube />
       <Contact />
-      {/* <Resume /> */}
+      <Resume />
       <Footer />
     </Fragment>
   );

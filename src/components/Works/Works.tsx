@@ -1,33 +1,90 @@
-// import React, { useState } from "react";
-// // import { AnimateOnScroll } from "animate-on-scroll-framer";
-// import { ScrollContainer } from "react-scroll-motion";
-// import { AiOutlineEnter } from "react-icons/ai";
-// import { SiGithub } from "react-icons/si";
-import Title from "../../Layout/Title/Title";
-import "./Works.scss";
-// import Title from "../../Layout/Title/Title";
-// import projects from "./worksData";
+import React, { Fragment, useState } from "react";
+import Container from "../../Layout/Container/Container";
+import classes from "./Works.module.scss";
+import { Animated } from "react-animated-css";
+import { projects } from "./ProjectsData";
+import { SiGithub } from "react-icons/si";
+import { AnimateOnScroll } from "animate-on-scroll-framer";
 
-const Works: React.FC = () => {
-  // const [current, setCurrent] = useState<number>(0);
-  // const length = projects.length;
+import {
+  MdOutlineArrowForwardIos,
+  MdOutlineArrowBackIosNew,
+} from "react-icons/md";
 
-  // const moveForward = () => {
-  //   setCurrent((prevCurrent) => {
-  //     return prevCurrent === length - 1 ? 0 : prevCurrent + 1;
-  //   });
-  // };
+import { FaLink } from "react-icons/fa";
 
-  // const backForward = () => {
-  //   setCurrent((prevCurrent) => {
-  //     return prevCurrent === 0 ? projects.length - 1 : prevCurrent - 1;
-  //   });
-  // };
+const Works = () => {
+  const [current, setCurrent] = useState<number>(0);
+  const length = projects.length;
+
+  const moveForward = () => {
+    setCurrent((prevCurrent) => {
+      return prevCurrent === length - 1 ? 0 : prevCurrent + 1;
+    });
+  };
+
+  const backForward = () => {
+    setCurrent((prevCurrent) => {
+      return prevCurrent === 0 ? projects.length - 1 : prevCurrent - 1;
+    });
+  };
 
   return (
-    <div className="tools">
-      <Title text="Tools"/>
-    </div>
+    <Container className={classes.workContainer} id={"works"}>
+      <div>
+        <h1>Works</h1>
+        <h4>ALL THE WORKS I DID</h4>
+      </div>
+      <AnimateOnScroll animation={"fadeInDown"}>
+        <div className={classes.showproject}>
+          {projects.map((p, i) => {
+            if (i === current) {
+              return (
+                <Fragment key={i}>
+                  <Animated
+                    animationIn="zoomIn"
+                    animationOut="fadeOut"
+                    isVisible={true}
+                    className={classes.video}
+                  >
+                    <img
+                      src={p.img}
+                      alt="mac"
+                      
+                    />
+                  </Animated>
+                  <div className={classes.BtnNextBack}>
+                    <MdOutlineArrowBackIosNew
+                      onClick={backForward}
+                      style={{ cursor: "pointer" }}
+                    />
+                    <MdOutlineArrowForwardIos
+                      onClick={moveForward}
+                      style={{ cursor: "pointer" }}
+                    />
+                  </div>
+                  <div className={classes.content}>
+                    <h2>{p.title}</h2>
+                    <p>{p.description}</p>
+                    <div className={classes.btn}>
+                      {p.github && (
+                        <a href={p.github} className={classes.git}>
+                          {<SiGithub />}
+                        </a>
+                      )}
+                      <span className={classes.link}>
+                        <FaLink />
+                      </span>
+                    </div>
+                  </div>
+                </Fragment>
+              );
+            }
+            return <Fragment key={i}></Fragment>;
+          })}
+        </div>
+      </AnimateOnScroll>
+    </Container>
   );
 };
 

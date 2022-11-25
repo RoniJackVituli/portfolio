@@ -1,15 +1,12 @@
 import React, { useRef, useState } from "react";
 import classes from "./About.module.scss";
 import Typing from "typewriter-effect";
-import mov from "../../img/check.mp4";
-// import mov from "../../img/checkWhite.mp4";
 import rjv from "../../img/RJV.png";
 import { GoUnmute, GoMute } from "react-icons/go";
 import { BsFillPlayFill } from "react-icons/bs";
 import { BiPause } from "react-icons/bi";
 import { VscDebugRestart } from "react-icons/vsc";
 import introImage from "../../img/intro.jpeg";
-
 import { Animated } from "react-animated-css";
 import Container from "../../Layout/Container/Container";
 const About: React.FC = () => {
@@ -44,7 +41,7 @@ const About: React.FC = () => {
   };
   return (
     <Container className = {classes.aboutContainer}>
-      <div className={classes.introContainer}>
+      <div className={classes.introContainer} id="home">
         <img src={introImage} alt="Introducation" />
       </div>
       <div className={classes.aboutcontent}>
@@ -71,7 +68,7 @@ const About: React.FC = () => {
             controls={false}
             poster={rjv}
           >
-            <source src={mov} type="video/mp4" />
+            <source src={''} type="video/mp4" />
           </video>
           <div className={classes.btnVideo}>
             <span onClick={muteStateHandler}>

@@ -45,28 +45,48 @@ const Header: React.FC = () => {
           <Hamburger toggled={isOpen} toggle={setOpen} size={20} />
         </div>
       )}
-      {!isMobile && <div className={classes.sidenavright}>
-        <ul>
-          <li>
-            <AiFillGithub />
-          </li>
-          <li>
-            <AiFillLinkedin />
-          </li>
-          <li>
-            <AiFillFacebook />
-          </li>
-          <li>
-            <AiFillYoutube />
-          </li>
-          <div></div>
-        </ul>
-      </div>}
+      {!isMobile && (
+        <div className={classes.sidenavright}>
+          <ul>
+            <a
+              href="https://github.com/RoniJackVituli/"
+              target={"_blank"}
+              rel="noreferrer"
+            >
+              <AiFillGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ronijackvituli/"
+              target={"_blank"}
+              rel="noreferrer"
+            >
+              <AiFillLinkedin />
+            </a>
+            <a
+              href="https://www.facebook.com/RoniJackVituli"
+              target={"_blank"}
+              rel="noreferrer"
+            >
+              <AiFillFacebook />
+            </a>
+            <a
+              href="https://www.youtube.com/c/RoniJackVituli"
+              target={"_blank"}
+              rel="noreferrer"
+            >
+              <AiFillYoutube />
+            </a>
+            <div></div>
+          </ul>
+        </div>
+      )}
 
-       {!isMobile && <div className={classes.sidenavleft}>
-        <a href="mailto:rjvtechnology@gmail.com">rjvtechnology@gmail.com</a>
-        <div></div>
-      </div> }
+      {!isMobile && (
+        <div className={classes.sidenavleft}>
+          <a href="mailto:rjvtechnology@gmail.com">rjvtechnology@gmail.com</a>
+          <div></div>
+        </div>
+      )}
     </Container>
   );
 };

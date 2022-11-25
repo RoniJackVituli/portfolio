@@ -1,16 +1,13 @@
 import React from "react";
 import classes from "./Tools.module.scss";
-import { Animated } from "react-animated-css";
-
 import { AnimationOnScroll } from "react-animation-on-scroll";
-
 import { Tooltip } from "@mui/material";
 import Container from "../../Layout/Container/Container";
 import { skills } from "./Skills";
 
 const Tools: React.FC = () => {
   return (
-    <Container className={classes.containerTools}>
+    <Container className={classes.containerTools} id={'tools'}>
         <h1>skills</h1>
         <h4>HOVER OVER A SKILL FOR MORE INFO</h4>
 
