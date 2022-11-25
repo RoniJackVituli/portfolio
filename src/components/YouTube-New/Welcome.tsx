@@ -1,5 +1,4 @@
 import React from "react";
-import { AnimateOnScroll } from "animate-on-scroll-framer";
 import "./SASS/Welcome.scss";
 import img from "../../img/profile.jpeg";
 
