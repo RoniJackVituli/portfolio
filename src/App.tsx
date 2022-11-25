@@ -3,52 +3,86 @@ import "./App.scss";
 import Tools from "./components/Tools/Tools";
 // import Works from "./components/Works/Works";
 import YouTube from "./components/YouTube-New/YouTube";
-// import Contact from "./components/Contact/Contact";
+import Contact from "./components/Contact/Contact";
 // import Resume from "./components/Resume/Resume";
 
 import Nav from "./Layout/Nav/Nav";
 import Footer from "./Layout/Footer/Footer";
-import Introdction from "./components/Introduction/Introdction";
 import Loading from "./Layout/Loading/Loading";
 import { useSelector } from "react-redux";
 import { RootState } from "./store";
+import { MobileActions } from "./store/mobile-slice";
+import {useDispatch} from 'react-redux';
+import About from "./components/About/About";
+const getWindowSize = () => {
+  const { innerWidth, innerHeight } = window;
+  return { innerWidth, innerHeight };
+}
+
+
 const App = () => {
+  const [ windowSize, setWindowSize] = useState(getWindowSize());
   const gender = useSelector((state: RootState) => state.gender);
-  const [check, setCheck] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (gender.clicked) {
       setTimeout(() => {
-        setCheck(true);
+        setLoading(true);
       }, 500);
     }
   }, [gender.clicked]);
 
+ 
   useEffect(() => {
     if (gender.clicked) {
       setTimeout(() => {
-        setCheck(false);
+        setLoading(false);
       }, 500);
       setTimeout(() => {
-        setCheck(true);
+        setLoading(true);
       }, 5000);
     }
-  }, [gender.clicked]);
+  }, []);
 
-  if (!check) {
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+    window.addEventListener("resize", handleWindowResize);
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
+  
+
+  useEffect(() => {
+    if (windowSize.innerWidth < 940) {
+      dispatch(MobileActions.isMobile());
+    } else {
+      dispatch(MobileActions.isDesktop());
+    }
+    // eslint-disable-next-line
+  }, [windowSize]);
+
+
+  if (!loading) {
     return <Loading />;
   }
 
   return (
     <Fragment>
       <Nav />
-      <Introdction />
+      <About/>
       {/* <Intro />
       <About /> */}
       {/* <Works /> */}
       <Tools />
       <YouTube />
-      {/* <Contact /> */}
+      <Contact />
       {/* <Resume /> */}
       <Footer />
     </Fragment>

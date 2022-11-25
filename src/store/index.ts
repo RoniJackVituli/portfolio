@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+import Mobile from "./mobile-slice";
 import Gendner from "./gender-slice";
 function saveToLocalStorage(state: any) {
   try {
@@ -25,6 +26,7 @@ function loadFromLocalStorage() {
 const store = configureStore({
   reducer: {
     gender: Gendner.reducer,
+    mobile: Mobile.reducer,
   },
   preloadedState: loadFromLocalStorage(),
 });
