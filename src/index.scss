@@ -1,22 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Oswald:wght@200;400&family=Poppins:wght@100;200;700;800;900&display=swap');
+@import "./_variables.scss";
 
-
-*{
+* {
   box-sizing: border-box;
   scroll-behavior: smooth;
-
 }
 
 body {
-  cursor: url('./img/newCursor.png'), auto;
+  cursor: url("./img/newCursor.png"), auto;
   color: white;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  // font-family: 'Roboto', sans-serif;
-  // font-family: 'Ubuntu', sans-serif; 
+  padding: 0;
+  font-family: $fontCal_regular;
   height: 100%;
   width: 100%;
-  background: #050810;
+  background: $main-background;
+}
 
+body::-webkit-scrollbar {
+  background-color: black;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: $hover;
+  border-radius: 20px;
 }

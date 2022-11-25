@@ -1,13 +1,19 @@
-import React, { useState } from "react";
-// import { AnimateOnScroll } from "animate-on-scroll-framer";
-import { ScrollContainer } from "react-scroll-motion";
-import { AiOutlineEnter } from "react-icons/ai";
+import React, { Fragment, useState } from "react";
+import Container from "../../Layout/Container/Container";
+import classes from "./Works.module.scss";
+import { Animated } from "react-animated-css";
+import { projects } from "./ProjectsData";
 import { SiGithub } from "react-icons/si";
-import "./Works.scss";
-import Title from "../../Layout/Title/Title";
-import projects from "./worksData";
+import { AnimateOnScroll } from "animate-on-scroll-framer";
 
-const Works: React.FC = () => {
+import {
+  MdOutlineArrowForwardIos,
+  MdOutlineArrowBackIosNew,
+} from "react-icons/md";
+
+import { FaLink } from "react-icons/fa";
+
+const Works = () => {
   const [current, setCurrent] = useState<number>(0);
   const length = projects.length;
 
@@ -24,87 +30,61 @@ const Works: React.FC = () => {
   };
 
   return (
-    <ScrollContainer>
-      <div className="works__container" id="works">
-        <Title text="works" />
-        {projects.map((project, index) => {
-          return (
-            <div key={index}>
-              {index === current && (
-                <>
-                  {/* <img src={project.img} alt="photo" style={{objectFit:'contain'  , width:"100%" , objectPosition:'top' , filter:'blur(20px)'}} className="works_background"/> */}
-                  <div
-                    className="works__background"
-                    style={{
-                      backgroundImage: `url(${project.img})`,
-                      backgroundPosition: "top",
-                      backgroundSize: "cover",
-                      height: "90vh",
-                    }}
-                  ></div>
-                  <div className="works__contact">
-                    {/* Arrow Left */}
-                    <svg
+    <Container className={classes.workContainer} id={"works"}>
+      <div>
+        <h1>Works</h1>
+        <h4>ALL THE WORKS I DID</h4>
+      </div>
+      <AnimateOnScroll animation={"fadeInDown"}>
+        <div className={classes.showproject}>
+          {projects.map((p, i) => {
+            if (i === current) {
+              return (
+                <Fragment key={i}>
+                  <Animated
+                    animationIn="zoomIn"
+                    animationOut="fadeOut"
+                    isVisible={true}
+                    className={classes.video}
+                  >
+                    <img
+                      src={p.img}
+                      alt="mac"
+                      
+                    />
+                  </Animated>
+                  <div className={classes.BtnNextBack}>
+                    <MdOutlineArrowBackIosNew
                       onClick={backForward}
-                      width="76"
-                      height="76"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="left__arrow"
-                    >
-                      <path d="M11.438 18.75 4.688 12l6.75-6.75"></path>
-                      <path d="M5.625 12h13.688"></path>
-                    </svg>
-                    {/* Arrow Right */}
-                    <svg
+                      style={{ cursor: "pointer" }}
+                    />
+                    <MdOutlineArrowForwardIos
                       onClick={moveForward}
-                      width="76"
-                      height="76"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="right__arrow"
-                    >
-                      <path d="m12.563 5.25 6.75 6.75-6.75 6.75"></path>
-                      <path d="M18.375 12H4.687"></path>
-                    </svg>
-                    <div data-aos="slidein" className="work__card box-floating">
-                      <div className="card__img">
-                        <img src={project.img} alt="lol" />
-                      </div>
-                      <div className="card__description">
-                        <h4>{project.title}</h4>
-                        <p>{project.description}</p>
-                        <div className="card__btn">
-                          <span className="tech">{project.tech}</span>
-                          <a className="btn" href={`${project.url}`}>
-                            Visit <AiOutlineEnter />
-                          </a>
-                          {project.github && (
-                            <a className="git" href={`${project.github}`}>
-                              <SiGithub />
-                            </a>
-                          )}
-                        </div>
-                      </div>
+                      style={{ cursor: "pointer" }}
+                    />
+                  </div>
+                  <div className={classes.content}>
+                    <h2>{p.title}</h2>
+                    <p>{p.description}</p>
+                    <div className={classes.btn}>
+                      {p.github && (
+                        <a href={p.github} className={classes.git}>
+                          {<SiGithub />}
+                        </a>
+                      )}
+                      <span className={classes.link}>
+                        <FaLink />
+                      </span>
                     </div>
                   </div>
-                </>
-              )}
-            </div>
-          );
-        })}
-      </div>
-    </ScrollContainer>
+                </Fragment>
+              );
+            }
+            return <Fragment key={i}></Fragment>;
+          })}
+        </div>
+      </AnimateOnScroll>
+    </Container>
   );
 };
 

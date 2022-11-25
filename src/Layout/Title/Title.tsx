@@ -1,16 +1,19 @@
 import React from "react";
-import "./Title.scss";
+import classes from "./Title.module.scss";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+
 type Props = {
   text: string;
+  className?: string;
 };
 
-const Title: React.FC<Props> = ({ text }) => {
+const Title: React.FC<Props> = ({ text,className }) => {
   return (
-    <div className="title">
-      <div className="title__border">
+    <AnimationOnScroll animateIn="animate__bounceIn">
+      <div className={classes.title + " " + className}>
         <h1>{text}</h1>
       </div>
-    </div>
+    </AnimationOnScroll>
   );
 };
 

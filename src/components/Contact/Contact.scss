@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Oswald:wght@200;400&display=swap");
 
-
+@import '../../variables';
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -12,10 +12,54 @@
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
+  
   .title-contact{
-    margin-top: 2rem;
-    margin-bottom: 3.5rem;
+    h1 {
+      text-align: center;
+      text-transform: uppercase;
+      margin: 0;
+      font-weight: 100;
+      font-size: 80px;
+      letter-spacing: 20px;
+      color: $slate;
+      @media (max-width: 1440px) {
+        font-size: 80px;
+      }
+      @media (max-width: 1200px) {
+        font-size: 75px;
+      }
+      @media (max-width: 940px) {
+        font-size: 90px;
+      }
+      @media (max-width: 640px) {
+        font-size: 40px;
+      }
+    }
+  
+    h4 {
+      text-transform: uppercase;
+      text-align: center;
+      top: 0;
+      margin-top: 0;
+      letter-spacing: 3px;
+      color: $slate;
+      @media (max-width: 1440px) {
+        font-size: 16px;
+        top: 8rem;
+      }
+      @media (max-width: 1200px) {
+        font-size: 15px;
+      }
+      @media (max-width: 940px) {
+        font-size: 14px;
+      }
+      @media (max-width: 640px) {
+        font-size: 12px;
+        top: 4rem;
+      }
+    }
   }
+
   .contact-cards {
     @media (max-width: 1250px) {
       flex-direction: column;
@@ -25,11 +69,7 @@
     display: flex;
     .card-right {
       position: relative;
-      background: -webkit-linear-gradient(
-        270deg,
-        rgba(12, 236, 211, 1) 0%,
-        rgba(0, 120, 208, 1) 72%
-      );
+      background-color: $main-color;
       width: 100%;
     }
     .card-left {

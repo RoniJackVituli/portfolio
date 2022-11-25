@@ -1,49 +1,89 @@
-import React, { Fragment } from "react";
-import ReactDOM from "react-dom";
+import React, { Fragment, useEffect, useState } from "react";
 import "./App.scss";
-import About from "./components/About/About";
-import Loading from "./Layout/Loading/Loading";
 import Tools from "./components/Tools/Tools";
-import Works from "./components/Works/Works";
 import YouTube from "./components/YouTube-New/YouTube";
 import Contact from "./components/Contact/Contact";
 import Resume from "./components/Resume/Resume";
-
 import Nav from "./Layout/Nav/Nav";
-import { ToastContainer } from "react-toastify";
 import Footer from "./Layout/Footer/Footer";
-import Intro from "./components/Intro/Intro";
+import Loading from "./Layout/Loading/Loading";
+import { useSelector } from "react-redux";
+import { RootState } from "./store";
+import { MobileActions } from "./store/mobile-slice";
+import {useDispatch} from 'react-redux';
+import About from "./components/About/About";
+import Works from "./components/Works/Works";
 
-function App() {
+const getWindowSize = () => {
+  const { innerWidth, innerHeight } = window;
+  return { innerWidth, innerHeight };
+}
+
+const App = () => {
+  const [ windowSize, setWindowSize] = useState(getWindowSize());
+  const gender = useSelector((state: RootState) => state.gender);
+  const [loading, setLoading] = useState(false);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (gender.clicked) {
+      setTimeout(() => {
+        setLoading(true);
+      }, 500);
+    }
+  }, [gender.clicked]);
+
+ 
+  useEffect(() => {
+    if (gender.clicked) {
+      setTimeout(() => {
+        setLoading(false);
+      }, 500);
+      setTimeout(() => {
+        setLoading(true);
+      }, 5000);
+    }
+    // eslint-disable-next-line
+  }, []);
+
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+    window.addEventListener("resize", handleWindowResize);
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
+
+  useEffect(() => {
+    if (windowSize.innerWidth < 940) {
+      dispatch(MobileActions.isMobile());
+    } else {
+      dispatch(MobileActions.isDesktop());
+    }
+    // eslint-disable-next-line
+  }, [windowSize]);
+
+
+  if (!loading) {
+    return <Loading />;
+  }
+
   return (
     <Fragment>
-      {ReactDOM.createPortal(
-        <Loading />,
-        document.getElementById("loading-root")!
-      )}
-      <ToastContainer
-        position="bottom-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
       <Nav />
-      <Intro />
-      <About />
-      <Works />
-      <YouTube />
+      <About/>
       <Tools />
+      <Works/>
+      <YouTube />
       <Contact />
       <Resume />
       <Footer />
     </Fragment>
   );
-}
+};
 
 export default App;
