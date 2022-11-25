@@ -1,7 +1,7 @@
-import letsdeal from "../../assets/imgs/LetsDeal.png";
-import gitprofile from "../../assets/imgs/GitProfile.png";
-import guesstheword from '../../assets/imgs/GuessTheWord.png';
-import estudy from '../../assets/imgs/estudy.png';
+// import letsdeal from "../../assets/imgs/LetsDeal.png";
+// import gitprofile from "../../assets/imgs/GitProfile.png";
+// import guesstheword from '../../assets/imgs/GuessTheWord.png';
+// import estudy from '../../assets/imgs/estudy.png';
 
 
 type ProjectData = {
@@ -20,7 +20,7 @@ export const projects: ProjectData[] = [
       " The LetsDeal was created in 2022. The website was created for customers who want to find the cheapest price for the product they are looking for. In addition, the website was established in order to create a revolution in the field of deals, coupons, and online sales.\n\nI did not do this project alone, my part of the project was client side (Frontend).",
     tech: "React",
     url: "https://lets-deal.net/",
-    img: letsdeal,
+    img: 'https://ik.imagekit.io/lmurr2tyi/LetsDeal.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669384907159',
   },
   {
     title: "Guess The Word",
@@ -29,7 +29,7 @@ export const projects: ProjectData[] = [
     tech: "React",
     url: "https://guesstheword-rjv.netlify.app/",
     github: "https://github.com/RoniJack/guess-the-word",
-    img: guesstheword,
+    img: 'https://ik.imagekit.io/lmurr2tyi/GuessTheWord.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669384905615',
   },
   {
     title: "GitProfile",
@@ -38,7 +38,7 @@ export const projects: ProjectData[] = [
     tech: "React",
     url: "https://guesstheword-rjv.netlify.app/",
     github: "https://github.com/RoniJack/guess-the-word",
-    img: gitprofile,
+    img: 'https://ik.imagekit.io/lmurr2tyi/GitProfile.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669384907306',
   },
   {
     title: "Estudy",
@@ -47,7 +47,7 @@ export const projects: ProjectData[] = [
     tech: "django",
     url: "http://estudy-sce.herokuapp.com/",
     github: "https://github.com/Project-Management-SCE/estudy-sce-web",
-    img: estudy,
+    img: 'https://ik.imagekit.io/lmurr2tyi/estudy.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669384909421',
   },
   // {
   //   title: "short-url",
