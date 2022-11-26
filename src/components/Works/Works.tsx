@@ -67,9 +67,14 @@ const Works = () => {
                           {<SiGithub />}
                         </a>
                       )}
-                      <span className={classes.link}>
+                      <a
+                        href={p.url}
+                        className={classes.link}
+                        target={"_blank"}
+                        rel="noreferrer"
+                      >
                         <FaLink />
-                      </span>
+                      </a>
                     </div>
                   </div>
                 </Fragment>
