@@ -13,6 +13,10 @@ import { MobileActions } from "./store/mobile-slice";
 import {useDispatch} from 'react-redux';
 import About from "./components/About/About";
 import Works from "./components/Works/Works";
+import ReactGA from "react-ga";
+
+const TRACKING_ID = process.env.REACT_APP_GOOGLE_ANALYTICS;
+ReactGA.initialize(TRACKING_ID!);
 
 const getWindowSize = () => {
   const { innerWidth, innerHeight } = window;
@@ -24,6 +28,10 @@ const App = () => {
   const gender = useSelector((state: RootState) => state.gender);
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
+  
+  useEffect(()=>{
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  },[])
 
   useEffect(() => {
     if (gender.clicked) {
