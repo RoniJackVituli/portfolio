@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react";
 import classes from "./About.module.scss";
 import Typing from "typewriter-effect";
 import rjv from "../../img/RJV.png";
+import male from '../../assets/videos/male.mp4';
+import female from '../../assets/videos/female.mp4';
 import { GoUnmute, GoMute } from "react-icons/go";
 import { BsFillPlayFill } from "react-icons/bs";
 import { BiPause } from "react-icons/bi";
@@ -9,6 +11,8 @@ import { VscDebugRestart } from "react-icons/vsc";
 import introImage from "../../img/intro.jpeg";
 import { Animated } from "react-animated-css";
 import Container from "../../Layout/Container/Container";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store";
 const About: React.FC = () => {
   const roles: string[] = [
     "Software Engineer.",
@@ -18,6 +22,7 @@ const About: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [mute, setMute] = useState(true);
   const [play, setPlay] = useState(true);
+  const gender = useSelector((state:RootState) => state.gender);
   const restartVideoHandler = () => {
     videoRef.current!.currentTime = 0;
   };
@@ -68,7 +73,7 @@ const About: React.FC = () => {
             controls={false}
             poster={rjv}
           >
-            <source src={''} type="video/mp4" />
+            <source src={gender.gender === 'male' ? male : female} type="video/mp4" />
           </video>
           <div className={classes.btnVideo}>
             <span onClick={muteStateHandler}>
