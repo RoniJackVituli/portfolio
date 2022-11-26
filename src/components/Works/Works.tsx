@@ -5,7 +5,6 @@ import { Animated } from "react-animated-css";
 import { projects } from "./ProjectsData";
 import { SiGithub } from "react-icons/si";
 import { AnimateOnScroll } from "animate-on-scroll-framer";
-
 import {
   MdOutlineArrowForwardIos,
   MdOutlineArrowBackIosNew,
@@ -47,11 +46,7 @@ const Works = () => {
                     isVisible={true}
                     className={classes.video}
                   >
-                    <img
-                      src={p.img}
-                      alt="mac"
-                      
-                    />
+                    <img src={p.img} alt="mac" />
                   </Animated>
                   <div className={classes.BtnNextBack}>
                     <MdOutlineArrowBackIosNew

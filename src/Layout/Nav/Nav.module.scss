@@ -1,9 +1,15 @@
 @import "../../variables.scss";
 .navbarContainer {
-  width: 100%;
+  position: fixed;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background: black;
   height: 70px;
   .logo {
     width: 30%;
@@ -31,11 +37,32 @@
       color: $hover;
     }
   }
-  .listMobile{
+  .listMobile {
     margin: 0;
     display: flex;
-    padding-right: 20px;
-    flex-direction: row-reverse;
+  }
+}
+
+.listMenuMobile {
+  display: flex;
+  background: black;
+  flex-direction: column;
+  a {
+    text-decoration: none;
+    font-family: $fontCal_bold;
+    text-transform: uppercase;
+    display: flex;
+    font-weight: 900;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid $slate;
+    height: 100px;
+    color: white;
+  }
+  a:hover{
+    background-color: $slate;
+    color: black;
   }
 }
 

@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import logo from "../../img/rjv.svg";
-// import { Drawer } from "@mui/material";
-// import IconButton from "@mui/material/IconButton";
+import { Drawer } from "@mui/material";
 import { Fade as Hamburger } from "hamburger-react";
 import { useSelector } from "react-redux";
-// import Tooltip from "@mui/material/Tooltip";
 import classes from "./Nav.module.scss";
 import {
   AiFillGithub,
@@ -41,9 +39,24 @@ const Header: React.FC = () => {
       )}
 
       {isMobile && (
-        <div className={classes.listMobile}>
-          <Hamburger toggled={isOpen} toggle={setOpen} size={20} />
-        </div>
+        <>
+          <div className={classes.listMobile}>
+            <Hamburger toggled={isOpen} toggle={setOpen} size={20} />
+          </div>
+          <Drawer open={isOpen} style={{ zIndex: 0 }} anchor={"top"}>
+            <div
+              style={{ marginTop: "70px" }}
+              className={classes.listMenuMobile}
+            >
+              <a href="#home" onClick={()=>{setOpen(false)}}>home</a>
+              <a href="#works" onClick={()=>{setOpen(false)}}>works</a>
+              <a href="#youtube" onClick={()=>{setOpen(false)}}>youtube</a>
+              <a href="#tools" onClick={()=>{setOpen(false)}}>skills</a>
+              <a href="#contact" onClick={()=>{setOpen(false)}}>contact</a>
+              <a href="#resume" onClick={()=>{setOpen(false)}}>resume</a>
+            </div>
+          </Drawer>
+        </>
       )}
       {!isMobile && (
         <div className={classes.sidenavright}>
