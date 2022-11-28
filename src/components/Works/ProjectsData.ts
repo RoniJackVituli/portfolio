@@ -36,7 +36,7 @@ export const projects: ProjectData[] = [
     description:
     "This project comes to help people who want to design their personal profile on Git.You can write about your personal abilities also to presenting your skills, and in which social networks you are active. you also can see the code in my GitHub. The technologies I used: React, TypeScript, SASS, HTML, Redux",
     tech: "React",
-    url: "https://guesstheword-rjv.netlify.app/",
+    url: "https://profilegit.netlify.app/",
     github: "https://github.com/RoniJack/guess-the-word",
     img: 'https://ik.imagekit.io/lmurr2tyi/GitProfile.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669384907306',
   },

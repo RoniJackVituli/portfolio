@@ -94,10 +94,10 @@ export const skills = [
     link: "https://angular.io/docs",
   },
   {
-    name: "jquery",
+    name: "finalcutpro",
     path: "https://raw.githubusercontent.com/RoniJackVituli/gitprofile/main/src/helpers/icons/programming/",
-    toolTip: "jquery",
-    link: "https://jquery.com/",
+    toolTip: "Final Cut Pro X",
+    link: "https://www.apple.com/final-cut-pro/",
   },
   {
     name: "photoshop",
