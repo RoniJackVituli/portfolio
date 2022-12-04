@@ -4,7 +4,7 @@ import { saveAs } from "file-saver";
 
 const Resume: React.FC = () => {
   const saveFile = () => {
-    saveAs("https://docdro.id/YDTpHIl", "rjvCV.pdf");
+    saveAs("https://docdro.id/reVr7OF", "rjvCV.pdf");
   };
   return (
     <div className="resume__container" id="resume">
