@@ -4,7 +4,8 @@ import RJV from "./RJV";
 import { Animated } from "react-animated-css";
 import { useDispatch, useSelector } from "react-redux";
 import { GenderActions } from "../../store/gender-slice";
-import Container from "../Container/Container";
+// import Container from "../Container/Container";
+import background from "../../assets/imgs/background.jpg";
 import { RootState } from "../../store";
 
 const Loading: React.FC = () => {
@@ -35,11 +36,16 @@ const Loading: React.FC = () => {
   };
 
   return (
-    <Container className={classes.loading}>
-      {/* <LogoRJV /> */}
-      <div className={classes.contant}>
-        <RJV className={gender.clicked && !loading ? classes.byebye : '' } style={{}} />
-        {!loading && (
+    <>
+      <div className={classes.introContainer}>
+        <img src={background} alt="Introducation" />
+      </div>
+      <div className={classes.loading}>
+        {/* <div className={classes.logo}>
+        <img src={logo} alt="Introducation" />
+      </div> */}
+        <RJV className={gender.clicked && !loading ? classes.byebye : ""} />
+        {!false && (
           <Animated
             animationIn="fadeInUp"
             animationOut="fadeOutDown"
@@ -64,7 +70,7 @@ const Loading: React.FC = () => {
           </Animated>
         )}
       </div>
-    </Container>
+    </>
   );
 };
 

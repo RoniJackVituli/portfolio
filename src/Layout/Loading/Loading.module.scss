@@ -1,31 +1,39 @@
-@import '../../variables';
+@import "../../variables";
+
+.introContainer {
+  position: fixed;
+  z-index: -1;
+  opacity: 0.2;
+  filter: grayscale(1);
+
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 70%,
+    transparent 100%
+  );
+}
 
 .loading {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  .contant{
-    position: relative;
-  }
-  .select{
-    position: absolute;
-    width: 100%;
-    bottom: 0px;
+  .select {
     display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
-    font-size: 100px;
-    padding: 0 100px;
-    font-family: $font_female_male;
-    span{
-      width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    span {
+      font-size: 100px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
       transition: 0.2s;
+      width: 450px;
+      cursor: pointer;
+      margin-right: 10px;
       border: 1px solid rgba(255, 255, 255, 0.331);
     }
-    span:hover{
+    span:hover {
       color: black;
       background-color: $hover;
     }
@@ -49,7 +57,6 @@
     }
   }
 }
-
 
 .byebye{
   animation: fadeOutUp 1s linear forwards;

@@ -1,58 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;400;500;600;700;800;900&display=swap");
 
-@font-face {
-  font-family: "calibribold";
-  src: url("./assets/fonts/calibri_bold-webfont.woff2") format("woff2"),
-    url("./assets/fonts/calibri_bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "calibrilight";
-  src: url("./assets/fonts/calibri_light-webfont.woff2") format("woff2"),
-    url("./assets/fonts/calibri_light-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "calibriregular";
-  src: url("./assets/fonts/calibri_regular-webfont.woff2") format("woff2"),
-    url("./assets/fonts/calibri_regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "calibrilight_italic";
-  src: url("./assets/fonts/calibri_light_italic-webfont.woff2") format("woff2"),
-    url("./assets/fonts/calibri_light_italic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Author-Variable';
-  src: url('./assets/fonts/Author-Variable.woff2') format('woff2'),
-       url('./assets/fonts/Author-Variable.woff') format('woff'),
-       url('./assets/fonts/Author-Variable.ttf') format('truetype');
-       font-weight: 200 700;
-       font-display: swap;
-       font-style: normal;
-}
-
-
-/**
-* This is a variable font
-* You can controll variable axes as shown below:
-* font-variation-settings: 'wght' 700.0;
-*
-* available axes:
-
-* 'wght' (range from 200.0 to 700.0)
-
-*/
 
 @font-face {
   font-family: 'Author-VariableItalic';
@@ -216,8 +163,9 @@
        font-display: swap;
        font-style: normal;
 }
+
+
 $font_female_male: 'Satoshi-Light';
-$font_small_text:"SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
 $fontCal_bold: Author-Semibold;
 $fontCal_regular: Author-Regular;
 $fontCal_light: Author-Light; 

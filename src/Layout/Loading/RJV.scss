@@ -1,96 +1,124 @@
+
 #fullName {
-  width: 100%;
   #R {
-    transform: scaleY(1.7) translateY(-100px);
+    transform: scaleX(1) scaleY(1.5) translateY(-20px);
     stroke-dasharray: 785;
     stroke-dashoffset: 785;
+    stroke: #fafafa;
+    stroke-width: 4;
     animation: line-anim 1.5s ease forwards, fill 0.5s ease forwards 3.5s;
   }
   #O {
-    transform: scaleY(1.7) translateY(-100px);
+    transform: scaleX(1) scaleY(1.5) translateY(-20px);
     stroke-dasharray: 785;
     stroke-dashoffset: 785;
+    stroke: #fafafa;
+    stroke-width: 4;
     animation: line-anim 1.5s ease forwards 0.2s, fill 0.5s ease forwards 3.5s;
   }
   #N {
-    transform: scaleY(1.7) translateY(-100px);
+    transform: scaleX(1) scaleY(1.5) translateY(-20px);
     stroke-dasharray: 785;
     stroke-dashoffset: 785;
+    stroke: #fafafa;
+    stroke-width: 4;
     animation: line-anim 1.5s ease forwards 0.4s, fill 0.5s ease forwards 3.5s;
   }
   #I {
-    transform: scaleY(1.7) translateY(-100px);
+    transform: scaleX(1) scaleY(1.5) translateY(-20px);
     stroke-dasharray: 785;
     stroke-dashoffset: 785;
+    stroke: #fafafa;
+    stroke-width: 4;
     animation: line-anim 1.5s ease forwards 0.6s, fill 0.5s ease forwards 3.5s;
   }
   #J {
     stroke-dasharray: 785;
-    transform: scaleY(1.7) translateY(-100px);
+    transform: scaleX(1) scaleY(1.5) translateY(-20px);
 
     stroke-dashoffset: 785;
+    stroke: #fafafa;
+    stroke-width: 4;
     animation: line-anim 1.5s ease forwards 0.8s, fill 0.5s ease forwards 3.5s;
   }
   #A {
-    transform: scaleY(1.7) translateY(-100px);
+    transform: scaleX(1) scaleY(1.5) translateY(-20px);
 
     stroke-dasharray: 785;
     stroke-dashoffset: 785;
+    stroke: #fafafa;
+    stroke-width: 4;
     animation: line-anim 1.5s ease forwards 1s, fill 0.5s ease forwards 3.5s;
   }
   #C {
-    transform: scaleY(1.7) translateY(-100px);
+    transform: scaleX(1) scaleY(1.5) translateY(-20px);
 
     stroke-dasharray: 785;
     stroke-dashoffset: 785;
+    stroke: #fafafa;
+    stroke-width: 4;
     animation: line-anim 1.5s ease forwards 1.2s, fill 0.5s ease forwards 3.5s;
   }
   #K {
-    transform: scaleY(1.7) translateY(-100px);
+    transform: scaleX(1) scaleY(1.5) translateY(-20px);
 
     stroke-dasharray: 785;
     stroke-dashoffset: 785;
+    stroke: #fafafa;
+    stroke-width: 4;
     animation: line-anim 1.5s ease forwards 1.3s, fill 0.5s ease forwards 3.5s;
   }
   #V {
-    transform: scaleY(1.7) translateY(-100px);
+    transform: scaleX(1) scaleY(1.5) translateY(-20px);
     stroke-dasharray: 785;
     stroke-dashoffset: 785;
+    stroke: #fafafa;
+    stroke-width: 4;
     animation: line-anim 1.5s ease forwards 1.4s, fill 0.5s ease forwards 3.5s;
   }
   #ITW {
-    transform: scaleY(1.7) translateY(-100px);
+    transform: scaleX(1) scaleY(1.5) translateY(-20px);
 
     stroke-dasharray: 785;
     stroke-dashoffset: 785;
+    stroke: #fafafa;
+    stroke-width: 4;
     animation: line-anim 1.5s ease forwards 1.5s, fill 0.5s ease forwards 3.5s;
   }
   #T {
-    transform: scaleY(1.7) translateY(-100px);
+    transform: scaleX(1) scaleY(1.5) translateY(-20px);
 
     stroke-dasharray: 785;
     stroke-dashoffset: 785;
+    stroke: #fafafa;
+    stroke-width: 4;
     animation: line-anim 1.5s ease forwards 1.6s, fill 0.5s ease forwards 3.5s;
   }
   #U {
     stroke-dasharray: 785;
     stroke-dashoffset: 785;
-    transform: scaleY(1.7) translateY(-100px);
+    stroke: #fafafa;
+    stroke-width: 4;
+    transform: scaleX(1) scaleY(1.5) translateY(-20px);
 
     animation: line-anim 1.5s ease forwards 1.7s, fill 0.5s ease forwards 3.5s;
   }
   #L {
     stroke-dasharray: 785;
     stroke-dashoffset: 785;
-    transform: scaleY(1.7) translateY(-100px);
+    stroke: #fafafa;
+    stroke-width: 4;
+    transform: scaleX(1) scaleY(1.5) translateY(-20px);
 
     animation: line-anim 1.5s ease forwards 1.7s, fill 0.5s ease forwards 3.5s;
   }
   #ITH {
-    transform: scaleY(1.7) translateY(-100px);
+    transform: scaleX(1) scaleY(1.5) translateY(-20px);
 
     stroke-dasharray: 785;
     stroke-dashoffset: 785;
+    stroke: #fafafa;
+    stroke-width: 4;
     animation: line-anim 1.5s ease forwards 1.8s, fill 0.5s ease forwards 3.5s;
   }
 }
@@ -103,14 +131,13 @@
 
 @keyframes fill {
   from {
-    fill: transparent;
+    fill: transparent !important;
   }
   to {
     stroke-width: 0;
-    fill: #ffff;
+    fill: #fafafa;
   }
 }
-
 
 @keyframes fadeInUp {
   0% {
