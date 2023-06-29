@@ -4,6 +4,9 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+*:target{
+  scroll-margin-top: 65px;
+}
 
 body {
   color: white;
@@ -16,6 +19,7 @@ body {
 body::-webkit-scrollbar {
   background-color: black;
   border-radius: 10px;
+  width: 5px;
 }
 body::-webkit-scrollbar-thumb {
   background-color: $hover;
