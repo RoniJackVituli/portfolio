@@ -11,7 +11,7 @@ const ScrollBtn = () => {
       className="demo"
     >
       <section id="section07">
-        <a href="#youtube">
+        <a href="#about">
           <span></span>
           <span></span>
           <span></span>

@@ -1,0 +1,107 @@
+@import "../../../variables";
+.__projects_container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  .showproject {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    img {
+      width: 1000px;
+      @media (max-width: 1200px) {
+        width: 750px;
+      }
+      @media (max-width: 940px) {
+        width: 540px;
+      }
+      @media (max-width: 640px) {
+        width: 350px;
+      }
+    }
+    .BtnNextBack {
+      position: absolute;
+      display: flex;
+      width: 100%;
+      z-index: 1;
+      @media (max-width: 640px) {
+        top: 20%;
+      }
+      justify-content: space-between;
+    }
+
+    .content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      h2 {
+        margin: 0;
+        font-size: 80px;
+        text-align: center;
+        @media (max-width: 1440px) {
+          font-size: 80px;
+          line-height: 80px;
+        }
+        @media (max-width: 1200px) {
+          font-size: 75px;
+          line-height: 75px;
+        }
+        @media (max-width: 940px) {
+          font-size: 90px;
+          line-height: 80px;
+        }
+        @media (max-width: 640px) {
+          font-size: 40px;
+          line-height: 40px;
+        }
+      }
+      p {
+        font-size: 20px;
+        text-align: center;
+        margin: 0;
+
+        @media (max-width: 940px) {
+          font-size: 18px;
+        }
+        @media (max-width: 640px) {
+          font-size: 15px;
+          width: 80%;
+        }
+      }
+      .btn {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+        .link {
+          cursor: pointer;
+          color: white;
+          font-size: 30px;
+          @media (max-width: 940px) {
+            font-size: 20px;
+          }
+          @media (max-width: 640px) {
+            font-size: 15px;
+          }
+        }
+        .git {
+          @media (max-width: 940px) {
+            font-size: 20px;
+          }
+          @media (max-width: 640px) {
+            font-size: 15px;
+          }
+          cursor: pointer;
+          text-decoration: none;
+          color: white;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}

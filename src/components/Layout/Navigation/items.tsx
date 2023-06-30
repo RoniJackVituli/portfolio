@@ -1,8 +1,8 @@
 import { BiHomeAlt } from "react-icons/bi";
 import { FaLaptopCode } from "react-icons/fa";
-import { AiOutlineProfile, AiOutlineYoutube } from "react-icons/ai";
-import { FiPaperclip } from "react-icons/fi";
+import { AiOutlineYoutube } from "react-icons/ai";
 import { MdOutlineContactMail } from "react-icons/md";
+import { SiAboutdotme } from "react-icons/si";
 
 const items = [
   {
@@ -11,9 +11,14 @@ const items = [
     to: "home",
   },
   {
-    title: "Works",
+    title: "Projects",
     icon: <FaLaptopCode />,
-    to: "works",
+    to: "projects",
+  },
+  {
+    title: "About",
+    icon: <SiAboutdotme />,
+    to: "about",
   },
 
   {
@@ -21,21 +26,13 @@ const items = [
     icon: <AiOutlineYoutube />,
     to: "youtube",
   },
-  {
-    title: "Tools",
-    icon: <AiOutlineProfile />,
-    to: "tools",
-  },
+
   {
     title: "Contact",
     icon: <MdOutlineContactMail />,
     to: "contact",
   },
-  {
-    title: "Resume",
-    icon: <FiPaperclip />,
-    to: "resume",
-  },
+
 ];
 
 export default items;

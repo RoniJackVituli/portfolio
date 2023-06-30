@@ -18,6 +18,12 @@ const youtubeData: YouTube[] = [
     url: "PLu_ObXXlDRoYFztek09uil95jaLs2nfDb",
   },
   {
+    title: "Data Structures!",
+    description:
+      " In this engaging video series, we embark on an insightful expedition into the fundamental building blocks of computer science. Whether you're a curious beginner or a seasoned programmer, this collection of videos will expand your knowledge and empower you to wield these powerful tools confidently.",
+    url: "PLu_ObXXlDRoaHy2KHJ0pVQYABm0M73vIY",
+  },
+  {
     title: "Tech Video!",
     description:
       "In this playlist I review and give my opinions about technological products! You will find here a lot of products worth hearing about",

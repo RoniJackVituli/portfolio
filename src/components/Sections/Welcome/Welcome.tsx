@@ -55,7 +55,7 @@ const Welcome: React.FC = () => {
               animationOut="fadeOutDown"
               isVisible={true}
             >
-              <FullName />
+              <FullName className={classes.__full_name}/>
               <Roles className={classes.typing} />
             </Animated>
           )}

@@ -3,7 +3,7 @@ import classes from "./Tools.module.scss";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { Tooltip } from "@mui/material";
 import Container from "../../Layout/Container/Container";
-import { skills } from "./Skills";
+import { skills } from "../About/Skills/tools";
 import SectionTitle from "../../Layout/SectionTitle/SectionTitle";
 
 const Tools: React.FC = () => {

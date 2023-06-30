@@ -5,7 +5,8 @@
   justify-content: center;
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 1px dashed $slate;
+  font-weight: 200;
+  
   .profileImg {
     width: 100%;
     display: flex;
@@ -22,9 +23,7 @@
         width: 150px;
         height: 150px;
       }
-      a:hover {
-        
-      }
+
       img {
         width: auto;
         height: 100%;
@@ -38,6 +37,8 @@
  
   }
   .profileText {
+    display: flex;
+    justify-content: center;
     p {
       width: 100%;
       text-align: center;

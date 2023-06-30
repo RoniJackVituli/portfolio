@@ -1,12 +1,12 @@
 
 #fullName {
-
+  padding-top: 10px;
   #R {
     transform: scaleX(1) scaleY(1) translateY(-20px);
     stroke-dasharray: 1500;
     stroke-dashoffset: 1500;
     stroke: #fafafa;
-    stroke-width: 4;
+    stroke-width: 3;
     animation: line-anim 2s ease forwards, fill 0.5s ease forwards 1.8s;
   }
   #O {
@@ -14,15 +14,15 @@
     stroke-dasharray: 785;
     stroke-dashoffset: 785;
     stroke: #fafafa;
-    stroke-width: 4;
+    stroke-width: 3;
     animation: line-anim 2s ease forwards 0.2s, fill 0.5s ease forwards 1.8s;
   }
   #N {
     transform: scaleX(1) scaleY(1) translateY(-20px);
     stroke-dasharray: 1500;
-    stroke-dashoffset: 1500;
+    stroke-dashoffset: 1800;
     stroke: #fafafa;
-    stroke-width: 4;
+    stroke-width: 3;
     animation: line-anim 2s ease forwards 0.4s, fill 0.5s ease forwards 1.8s;
   }
  

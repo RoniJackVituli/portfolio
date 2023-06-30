@@ -11,7 +11,7 @@ const YouTube: React.FC = () => {
   const url = `https://www.youtube.com/embed?listType=playlist&list=`;
   return (
     <Container className={classes.youtubeContainer} id={"youtube"}>
-      <SectionTitle title="youtube" subtitle="come to learn more" />
+      <SectionTitle title="YouTube" subtitle="come to learn more" />
       <Welcome />
       {youtubeData.map((video, i) => {
         if (i % 2 === 0) {

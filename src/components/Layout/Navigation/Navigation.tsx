@@ -3,6 +3,7 @@ import Container from "../Container/Container";
 import classes from "./Navigation.module.scss";
 import { Animated } from "react-animated-css";
 import items from "./items";
+import {isMobile} from 'react-device-detect';
 
 const Navigation = () => {
   const [isScroll, setIsScroll] = useState<boolean>(false);
@@ -21,6 +22,8 @@ const Navigation = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  if(isMobile) return <></>
 
   if (!isScroll) {
     return (

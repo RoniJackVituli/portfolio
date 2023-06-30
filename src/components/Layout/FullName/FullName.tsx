@@ -1,11 +1,13 @@
 import React from "react";
-import classes from './FullName.module.scss';
 import fullNameLogo from '../../../img/logofullnameletters.jpeg';
 
+type Props = {
+  className?:string;
+}
 
-const FullName = () => {
+const FullName = ({className}:Props) => {
   return (
-    <div className={classes.__full_name}>
+    <div className={className}>
       <img src={fullNameLogo} alt="" />
     </div>
   );

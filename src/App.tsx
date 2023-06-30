@@ -6,10 +6,10 @@ import { useDispatch, useSelector } from "react-redux";
 import ReactGA from "react-ga";
 import Welcome from "./components/Sections/Welcome/Welcome";
 import { RootState } from "./store";
-import Tools from "./components/Sections/Tools/Tools";
-import Works from "./components/Sections/Works/Works";
-import Contact from "./components/Sections/Contact/Contact";
+import Projects from "./components/Sections/Projects/Projects";
+// import Contact from "./components/Sections/Contact/Contact";
 import Footer from "./components/Layout/Footer/Footer";
+import About from "./components/Sections/About/About";
 
 const TRACKING_ID = process.env.REACT_APP_GOOGLE_ANALYTICS;
 ReactGA.initialize(TRACKING_ID!);
@@ -43,10 +43,10 @@ const App = () => {
       <Welcome />
       {showContent && (
         <>
+          <About/>
+          <Projects/>
           <YouTube />
-          <Tools/>
-          <Works/>
-          <Contact/>
+          {/* <Contact/> */}
           <Footer/>
         </>
       )}
