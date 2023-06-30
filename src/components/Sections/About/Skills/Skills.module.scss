@@ -1,0 +1,94 @@
+@import "../../../../variables";
+.__skills {
+  font-family: $font-text;
+  h1 {
+    text-align: start;
+    margin: 0;
+    @media (max-width: 1200px) {
+      margin-top: 10px;
+      text-align: center;
+    }
+  }
+  .__pyramids {
+    padding: 0px 2rem;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .flippedPyramid {
+      display: flex;
+      flex-direction: column-reverse;
+      transition: 0.2s;
+      width: max-content;
+      gap: 1rem;
+
+      @media (max-width: 1200px) {
+        gap: 1.1rem;
+      }
+      @media (max-width: 940px) {
+        gap: 1rem;
+      }
+      @media (max-width: 640px) {
+        gap: 1rem;
+      }
+
+      .row {
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+      }
+      .circle {
+        cursor: pointer;
+        width: 70px;
+        height: 70px;
+        img {
+          width: 100%;
+          transition: 0.2s;
+        }
+
+        img:hover {
+          transform: scale(1.24);
+        }
+      }
+    }
+    .pyramid {
+      display: flex;
+      flex-direction: column;
+      transition: 0.2s;
+      width: max-content;
+      gap: 1rem;
+
+      @media (max-width: 1200px) {
+        gap: 1.1rem;
+      }
+      @media (max-width: 940px) {
+        gap: 1rem;
+      }
+      @media (max-width: 640px) {
+        gap: 1rem;
+      }
+
+      .row {
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+      }
+      .circle {
+        cursor: pointer;
+        width: 70px;
+        height: 70px;
+        img {
+          width: 100%;
+          transition: 0.2s;
+        }
+
+        img:hover {
+          transform: scale(1.24);
+        }
+      }
+    }
+  }
+}

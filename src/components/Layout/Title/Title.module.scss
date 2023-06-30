@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Combo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import "../../variables.scss";
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    margin: 0;
+    line-height: 50px;
+    font-size: 50px;
+    letter-spacing: 5.5px;
+    font-family: $fontCal_light;
+    @media (max-width: 1440px) {
+      font-size: 45px;
+    }
+    @media (max-width: 1200px) {
+      font-size: 40px;
+    }
+    @media (max-width: 940px) {
+      font-size: 35px;
+    }
+    @media (max-width: 640px) {
+      font-size: 30px;
+    }
+  }
+
+}
+
+.title::before {
+  content: "";
+  width: 50%;
+  border: 1px solid $hover;
+  margin-right: 10px;
+}
+.title::after {
+  width: 50%;
+  margin-left: 10px;
+  content: "";
+  border: 1px solid $hover;
+}

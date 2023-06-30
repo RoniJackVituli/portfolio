@@ -1,0 +1,85 @@
+@import '../../../../variables';
+.welcome__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  font-weight: 200;
+  
+  .profileImg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .circular--landscape {
+      margin-right:20px;
+      position: relative;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 50%;
+
+      @media (max-width: 1024px) {
+        width: 150px;
+        height: 150px;
+      }
+
+      img {
+        width: auto;
+        height: 100%;
+        margin-left: -70px;
+        @media (max-width: 1024px) {
+          margin-left: -50px;
+        }
+      }
+    }
+    
+ 
+  }
+  .profileText {
+    display: flex;
+    justify-content: center;
+    p {
+      width: 100%;
+      text-align: center;
+      font-size: 1.3rem;
+      margin: 0;
+      @media (max-width: 1400px) {
+        font-size: 1.2rem;
+      }
+      @media (max-width: 1300px) {
+        font-size: 1.1rem;
+      }
+      @media (max-width: 1024px) {
+        font-size: 1rem;
+      }
+      @media (max-width: 870px) {
+        width: 80%;
+        font-size: 0.9rem;
+      }
+      @media (max-width: 640px) {
+        font-size: 0.9rem;
+      }
+      @media (max-width: 450px) {
+        width: 100%;
+        font-size: 0.7rem;
+      }
+      @media (max-width: 280px) {
+        width: 100%;
+        font-size: 0.5rem;
+      }
+
+      @media (max-height: 414px) {
+        font-size: 0.7rem;
+      }
+
+      @media (max-height: 375px) {
+        font-size: 0.7rem;
+      }
+
+      @media (max-height: 280px) {
+        font-size: 0.5rem;
+      }
+    }
+  }
+}

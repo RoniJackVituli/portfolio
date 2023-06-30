@@ -1,0 +1,70 @@
+@import "../../../variables";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+
+.__welcome_container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  @media (max-width: 800px) {
+    gap: 0px;
+  }
+  .__message {
+
+    .__full_name {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 300px;
+        @media (max-width: 850px) {
+          width: 250px;
+        }
+      }
+    }
+    .typing {
+      text-align: center;
+      margin-top: 10px;
+      text-transform: uppercase;
+      font-family: $font-main;
+      span {
+        font-size: 1.5rem;
+        color: $lightest-slate;
+        @media (max-width: 800px) {
+          font-size: 1.1rem;
+        }
+
+      }
+    }
+  }
+
+  .__logo {
+    text-align: center;
+    @media (max-width: 1200px) {
+      svg {
+        width: 450px;
+      }
+    }
+    @media (max-width: 800px) {
+      svg {
+        width: 350px;
+      }
+    }
+    @media (max-width: 500px) {
+      svg {
+        width: 250px;
+      }
+    }
+  }
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, -100%, 0);
+  }
+}

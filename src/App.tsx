@@ -1,19 +1,15 @@
-import React, { Fragment, useEffect, useState } from "react";
-import "./App.scss";
-import Tools from "./components/Tools/Tools";
-import YouTube from "./components/YouTube-New/YouTube";
-import Contact from "./components/Contact/Contact";
-import Resume from "./components/Resume/Resume";
-import Nav from "./Layout/Nav/Nav";
-import Footer from "./Layout/Footer/Footer";
-import Loading from "./Layout/Loading/Loading";
-import { useSelector } from "react-redux";
-import { RootState } from "./store";
+import React, { useEffect, useState } from "react";
+import YouTube from "./components/Sections/YouTube-New/YouTube";
+
 import { MobileActions } from "./store/mobile-slice";
-import {useDispatch} from 'react-redux';
-import About from "./components/About/About";
-import Works from "./components/Works/Works";
+import { useDispatch, useSelector } from "react-redux";
 import ReactGA from "react-ga";
+import Welcome from "./components/Sections/Welcome/Welcome";
+import { RootState } from "./store";
+import Projects from "./components/Sections/Projects/Projects";
+// import Contact from "./components/Sections/Contact/Contact";
+import Footer from "./components/Layout/Footer/Footer";
+import About from "./components/Sections/About/About";
 
 const TRACKING_ID = process.env.REACT_APP_GOOGLE_ANALYTICS;
 ReactGA.initialize(TRACKING_ID!);
@@ -21,50 +17,17 @@ ReactGA.initialize(TRACKING_ID!);
 const getWindowSize = () => {
   const { innerWidth, innerHeight } = window;
   return { innerWidth, innerHeight };
-}
+};
 
 const App = () => {
-  const [ windowSize, setWindowSize] = useState(getWindowSize());
-  const gender = useSelector((state: RootState) => state.gender);
-  const [loading, setLoading] = useState(false);
+  //eslint-disable-next-line
+  const [windowSize, setWindowSize] = useState(getWindowSize());
   const dispatch = useDispatch();
-  
-  useEffect(()=>{
+  const showContent = useSelector((state: RootState) => state.showContent.show);
+
+  useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
-  },[])
-
-  useEffect(() => {
-    if (gender.clicked) {
-      setTimeout(() => {
-        setLoading(true);
-      }, 500);
-    }
-  }, [gender.clicked]);
-
- 
-  useEffect(() => {
-    if (gender.clicked) {
-      setTimeout(() => {
-        setLoading(false);
-      }, 500);
-      setTimeout(() => {
-        setLoading(true);
-      }, 5000);
-    }
-    // eslint-disable-next-line
   }, []);
-
-
-  useEffect(() => {
-    function handleWindowResize() {
-      setWindowSize(getWindowSize());
-    }
-    window.addEventListener("resize", handleWindowResize);
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
-
 
   useEffect(() => {
     if (windowSize.innerWidth < 940) {
@@ -75,22 +38,19 @@ const App = () => {
     // eslint-disable-next-line
   }, [windowSize]);
 
-
-  if (!loading) {
-    return <Loading />;
-  }
-
   return (
-    <Fragment>
-      <Nav />
-      <About/>
-      <Tools />
-      <Works/>
-      <YouTube />
-      <Contact />
-      <Resume />
-      <Footer />
-    </Fragment>
+    <>
+      <Welcome />
+      {showContent && (
+        <>
+          <About/>
+          <Projects/>
+          <YouTube />
+          {/* <Contact/> */}
+          <Footer/>
+        </>
+      )}
+    </>
   );
 };
 
