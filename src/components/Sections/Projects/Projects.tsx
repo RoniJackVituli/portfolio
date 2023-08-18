@@ -16,7 +16,7 @@ const Projects = () => {
         {projects.map((project, _idx) => {
         
           return (
-            <AnimateOnScroll animation={_idx % 2 == 0 ? "fadeInRight" : "fadeInLeft"}>
+            <AnimateOnScroll animation={_idx % 2 === 0 ? "fadeInRight" : "fadeInLeft"}>
               <Project project={project} key={_idx} />
             </AnimateOnScroll>
           );
