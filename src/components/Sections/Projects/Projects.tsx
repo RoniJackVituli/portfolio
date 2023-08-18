@@ -13,11 +13,14 @@ const Projects = () => {
     <Container className={classes.__projects_container} id={"projects"}>
       <SectionTitle title="Projects" subtitle="A Compilation of Experiences" />
 
-      <AnimateOnScroll animation={"fadeIn"}>
         {projects.map((project, _idx) => {
-          return <Project project={project} key={_idx} />;
+        
+          return (
+            <AnimateOnScroll animation={_idx % 2 == 0 ? "fadeInRight" : "fadeInLeft"}>
+              <Project project={project} key={_idx} />
+            </AnimateOnScroll>
+          );
         })}
-      </AnimateOnScroll>
     </Container>
   );
 };

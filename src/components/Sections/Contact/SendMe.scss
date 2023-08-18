@@ -2,11 +2,12 @@
 
 .sendme-container {
   padding: 0 2rem;
+  min-width: 30vw;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
   form {
     width: 100%;
     div {
@@ -67,8 +68,9 @@
   }
 
   .divloader {
-    height: 40vh;
+    position: relative;
     width: 100%;
+    height: inherit;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -14,7 +14,7 @@ const isValidEmail = (email: string) => {
 };
 
 const SendMe: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [messageSend, setMessageSend] = useState(false);
   const [nameValid, setNameValid] = useState(true);
   const [emailValid, setEmailValid] = useState(true);
   const [subjectValid, setSubjectValid] = useState(true);
@@ -87,7 +87,7 @@ const SendMe: React.FC = () => {
     event.preventDefault();
 
     setTimeout(() => {
-      setIsLoading(true);
+      setMessageSend(true);
       emailjs
         .sendForm(
           "ronijackvituli250695",
@@ -96,7 +96,7 @@ const SendMe: React.FC = () => {
           "NDkm2tmXaqzhq94w0"
         )
         .then((response) => {
-          setIsLoading(false);
+          setMessageSend(false);
           toast.success('The Mail Send')
         })
         .catch((err) => {
@@ -107,7 +107,7 @@ const SendMe: React.FC = () => {
 
   return (
     <div className="sendme-container">
-      {!isLoading && (
+      {!messageSend && (
         <form ref={formRef} onSubmit={submitHandler}>
           <h1>Send me a message!</h1>
           <div className="name-text error">
@@ -176,7 +176,7 @@ const SendMe: React.FC = () => {
           </div>
         </form>
       )}
-      {isLoading && (
+      {messageSend && (
         <div className="divloader">
           <LoaderMessage />
         </div>

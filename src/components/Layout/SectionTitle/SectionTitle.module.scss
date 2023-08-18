@@ -31,20 +31,17 @@
 .__subtitle {
   text-transform: uppercase;
   text-align: center;
-  margin: 0;
-  letter-spacing: 4px;
+  margin-top: 0;
+  letter-spacing: 3px;
   color: white;
   font-family: $font-main;
+  font-size: 0.9rem;
   @media (max-width: 1440px) {
-    font-size: 16px;
   }
   @media (max-width: 1200px) {
-    font-size: 15px;
   }
   @media (max-width: 940px) {
-    font-size: 14px;
   }
   @media (max-width: 640px) {
-    font-size: 12px;
   }
 }
