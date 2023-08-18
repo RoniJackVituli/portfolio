@@ -11,7 +11,7 @@
     gap: 0px;
   }
   .__message {
-
+    min-height: 75px;
     .__full_name {
       display: flex;
       justify-content: center;
@@ -40,8 +40,10 @@
 
   .__logo {
     text-align: center;
+    padding-top: 10px;
     @media (max-width: 1200px) {
       svg {
+        border: 1px solid blue;
         width: 450px;
       }
     }
