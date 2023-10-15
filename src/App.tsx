@@ -12,6 +12,7 @@ import About from "./components/Sections/About/About";
 import Contact from "./components/Sections/Contact/Contact";
 
 const TRACKING_ID = process.env.REACT_APP_GOOGLE_ANALYTICS;
+
 ReactGA.initialize(TRACKING_ID!);
 
 const getWindowSize = () => {
