@@ -3,9 +3,9 @@ import YouTube from "./components/Sections/YouTube-New/YouTube";
 
 import { MobileActions } from "./store/mobile-slice";
 import { useDispatch, useSelector } from "react-redux";
-import ReactGA from "react-ga";
 import Welcome from "./components/Sections/Welcome/Welcome";
 import { RootState } from "./store";
+import ReactGA from "react-ga4";
 import Projects from "./components/Sections/Projects/Projects";
 import Footer from "./components/Layout/Footer/Footer";
 import About from "./components/Sections/About/About";
@@ -27,7 +27,11 @@ const App = () => {
   const showContent = useSelector((state: RootState) => state.showContent.show);
 
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    console.log(window.location.pathname + window.location.search);
+    ReactGA.send({ hitType: "pageview", 
+                   page: window.location.pathname + window.location.search, 
+                   title: "" });
+
   }, []);
 
   useEffect(() => {
