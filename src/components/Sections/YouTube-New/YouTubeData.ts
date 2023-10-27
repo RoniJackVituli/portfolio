@@ -24,6 +24,12 @@ const youtubeData: YouTube[] = [
     url: "PLu_ObXXlDRoaHy2KHJ0pVQYABm0M73vIY",
   },
   {
+    title: "LeetCode Solutions",
+    description:
+      "Welcome to the LeetCode Solutions Playlist! Dive into a comprehensive collection of coding solutions, tutorials, and explanations curated for both beginners and experienced developers alike.",
+    url: "PLu_ObXXlDRoa16aPo5AlaFChTxDZx_2Iw",
+  },
+  {
     title: "Tech Video!",
     description:
       "In this playlist I review and give my opinions about technological products! You will find here a lot of products worth hearing about",
