@@ -8,7 +8,7 @@ type Props = {
 
 const RJV: React.FC<Props> = ({ className }) => {
   return (
-    <div className={className}>
+    <div className="flex justify-center items-center">
       <svg width="547.967035px" id="fullName" height="266.161099px" viewBox="0 0 547.967035 266.161099">
         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g id="Artboard" transform="translate(-17.3036, -14.0191)" fill="#FAFAFA" stroke="#979797">

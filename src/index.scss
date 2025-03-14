@@ -1,4 +1,5 @@
-@import "./_variables.scss";
+@use './variables.scss' as *; // Ensure the path is correct
+
 
 * {
   box-sizing: border-box;

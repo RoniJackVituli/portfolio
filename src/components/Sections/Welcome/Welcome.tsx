@@ -12,7 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../store";
 import SidesNav from "../../Layout/SidesNav/SidesNav";
 import Navigation from "../../Layout/Navigation/Navigation";
-
+import { motion } from "framer-motion";
 
 const Welcome: React.FC = () => {
   const [progress, setProgress] = useState(0);
@@ -50,14 +50,13 @@ const Welcome: React.FC = () => {
         <RJV className={classes.__logo} />
         <div className={classes.__message}>
           {showContent && (
-            <Animated
-              animationIn="fadeInUp"
-              animationOut="fadeOutDown"
-              isVisible={true}
+            <motion.div
+              initial={{ opacity: 0, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
             >
               <FullName className={classes.__full_name}/>
               <Roles className={classes.typing} />
-            </Animated>
+            </motion.div>
           )}
         </div>
       </Wapper>

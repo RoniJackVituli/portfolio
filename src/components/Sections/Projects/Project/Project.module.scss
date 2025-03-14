@@ -10,7 +10,7 @@
     img {
       width: 550px;
       @media (max-width: 1200px) {
-       width: 450px;
+        width: 450px;
       }
     }
   }
@@ -49,11 +49,10 @@
           background-color: #9c37ff;
           padding: 0.5rem;
           border-radius: 5px;
-            transition: 0.2s;
+          transition: 0.2s;
         }
-        .__btn:hover{
-            
-            background-color: #9133ef;
+        .__btn:hover {
+          background-color: #9133ef;
         }
         .git {
           display: flex;
@@ -63,10 +62,12 @@
           @media (max-width: 640px) {
             font-size: 15px;
           }
-          cursor: pointer;
-          text-decoration: none;
-          color: white;
-          font-size: 30px;
+          & {
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 30px;
+            color: white;
+          }
         }
       }
     }

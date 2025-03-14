@@ -1,4 +1,5 @@
-@import "../../../variables";
+@use "@/variables.scss" as *;
+
 .__projects_container {
   min-height: 100vh;
   display: flex;
@@ -7,11 +8,13 @@
   position: relative;
 
   .showproject {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    justify-content: center;
+    & {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      justify-content: center;
+    }
     img {
       width: 1000px;
       @media (max-width: 1200px) {
@@ -29,12 +32,11 @@
       display: flex;
       width: 100%;
       z-index: 1;
+      justify-content: space-between;
       @media (max-width: 640px) {
         top: 20%;
       }
-      justify-content: space-between;
     }
-
     .content {
       width: 100%;
       display: flex;
@@ -90,16 +92,17 @@
           }
         }
         .git {
+          cursor: pointer;
+          text-decoration: none;
+          color: white;
+          font-size: 30px;
           @media (max-width: 940px) {
             font-size: 20px;
           }
           @media (max-width: 640px) {
             font-size: 15px;
           }
-          cursor: pointer;
-          text-decoration: none;
-          color: white;
-          font-size: 30px;
+        
         }
       }
     }

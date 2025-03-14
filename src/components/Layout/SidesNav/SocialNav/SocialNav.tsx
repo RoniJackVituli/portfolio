@@ -5,7 +5,7 @@ import {
   AiFillLinkedin,
   AiFillFacebook,
 } from "react-icons/ai";
-import { Animated } from "react-animated-css";
+import { motion } from "framer-motion";
 
 type SocialNavProps = {
   className?: string;
@@ -13,11 +13,11 @@ type SocialNavProps = {
 
 const SocialNav = ({ className }: SocialNavProps) => {
   return (
-    <Animated
-      animationIn="fadeInUp"
-      animationOut="fadeInDown"
-      isVisible={true}
+    <motion.div
       className={className}
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
     >
       <ul>
         <a
@@ -50,7 +50,7 @@ const SocialNav = ({ className }: SocialNavProps) => {
         </a>
         <div></div>
       </ul>
-    </Animated>
+    </motion.div>
   );
 };
 

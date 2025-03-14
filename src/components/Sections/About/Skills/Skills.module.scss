@@ -1,4 +1,5 @@
-@import "../../../../variables";
+@use '../../../../variables.scss' as *;
+
 .__skills {
   font-family: $font-text;
   h1 {

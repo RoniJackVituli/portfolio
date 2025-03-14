@@ -5,6 +5,7 @@ import "./SendMe.scss";
 import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import LoaderMessage from "../../Layout/LoaderMessage/LoaderMessage";
+import { Typography } from "@mui/material";
 const containsOnlyLetters = (str: string) => {
   return /^[a-z A-Z]*$/.test(str);
 };
@@ -109,7 +110,7 @@ const SendMe: React.FC = () => {
     <div className="sendme-container">
       {!messageSend && (
         <form ref={formRef} onSubmit={submitHandler}>
-          <h1>Send me a message!</h1>
+          <Typography variant="h5">Send me a message!</Typography>
           <div className="name-text error">
             <Input
               type="text"

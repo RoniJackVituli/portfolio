@@ -1,4 +1,4 @@
-@import "../../variables";
+@use '../.._variables.scss' as *;
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
 .loading {
   height: 100vh;

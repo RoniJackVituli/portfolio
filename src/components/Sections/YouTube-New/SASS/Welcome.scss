@@ -1,4 +1,5 @@
-@import '../../../../variables';
+@use '../../../../variables.scss' as *;
+
 .welcome__container {
   display: flex;
   flex-direction: column;
